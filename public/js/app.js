@@ -6,14 +6,17 @@ const tabsEl = document.getElementById("tabs");
 const bodyEl = document.getElementById("body");
 const titleEl = document.getElementById("title");
 const backEl = document.getElementById("back");
-const fatEl = document.getElementById("fatBtn");
+
 const impEl = document.getElementById("impBtn");
+const distrEl = document.getElementById("distrBtn");
 const heroEl = document.getElementById("hero");
 const tabsRowEl = document.getElementById("tabsRow");
 const scrollEl = document.getElementById("scroll");
 const themeBtn = document.getElementById("theme");
 const q = document.getElementById("q");
 const countEl = document.getElementById("count");
+const cmpEl = document.getElementById("cmpBtn");
+const rootEl = document.documentElement;
 function setCount(n, term) {
   countEl.hidden = !term;
   countEl.textContent = n + (n === 1 ? " result" : " results");
@@ -26,6 +29,8 @@ let view = "cloud";
 let cur = 0;
 let curP = 0;
 let builtView = "";
+let cmpA = 2, cmpB = 3;   // compare view: module indexes (default M3 vs M4)
+let sel = -1;             // J/K: index of the highlighted topic card
 
 /* ---------- helpers ---------- */
 function esc(s) {
@@ -167,11 +172,102 @@ function renderFat(term) {
   markTabs(curP);
 }
 
-/* ---------- imp view: handwritten important-topics photo ---------- */
-function renderImp() {
+/* ---------- distr view: marks distribution ---------- */
+function renderDistr() {
   let list = "";
   MODS.forEach((x) => { if (x.marks) list += "<p>" + x.id.toUpperCase() + " - " + x.marks + "</p>"; });
-  bodyEl.innerHTML = "<h1>Important</h1>" + marksStrip(true) + '<div class="imp-list">' + list + "</div>";
+  bodyEl.innerHTML = "<h1>Distribution</h1>" + marksStrip(true) + '<div class="imp-list">' + list + "</div>";
+}
+
+/* ---------- imp view: two pictures, swipe or arrows ---------- */
+const IMP_IMGS = ["img/imp1.jpg", "img/imp2.jpg"];
+function renderImp() {
+  let slides = "", dots = "";
+  IMP_IMGS.forEach((src, n) => {
+    slides += '<div class="imp-slide"><img src="' + src + '" alt="Important notes, page ' + (n + 1) + '" draggable="false"></div>';
+    dots += '<button type="button" class="imp-dot" data-i="' + n + '" aria-label="Picture ' + (n + 1) + '"></button>';
+  });
+  bodyEl.innerHTML = "<h1>Important</h1>" +
+    '<div class="imp-wrap"><div class="imp-car" tabindex="0" aria-label="Important notes pictures">' + slides + "</div>" +
+    '<div class="imp-nav"><button type="button" class="icon-btn imp-prev" aria-label="Previous picture">&#8249;</button>' + dots +
+    '<button type="button" class="icon-btn imp-next" aria-label="Next picture">&#8250;</button></div></div>';
+  const car = bodyEl.querySelector(".imp-car");
+  const ds = bodyEl.querySelectorAll(".imp-dot");
+  const step = () => car.clientWidth + 16;
+  const idx = () => Math.max(0, Math.min(IMP_IMGS.length - 1, Math.round(car.scrollLeft / step())));
+  const sync = () => ds.forEach((d, n) => d.classList.toggle("on", n === idx()));
+  const to = (n) => car.scrollTo({ left: Math.max(0, Math.min(IMP_IMGS.length - 1, n)) * step(), behavior: "smooth" });
+  car.addEventListener("scroll", sync, { passive: true });
+  ds.forEach((d) => { d.onclick = () => to(+d.dataset.i); });
+  bodyEl.querySelector(".imp-prev").onclick = () => to(idx() - 1);
+  bodyEl.querySelector(".imp-next").onclick = () => to(idx() + 1);
+  car.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") { e.preventDefault(); to(idx() - 1); }
+    else if (e.key === "ArrowRight") { e.preventDefault(); to(idx() + 1); }
+  });
+  sync();
+}
+
+/* ---------- compare view: two modules side by side ---------- */
+function cmpCol(m) {
+  const all = m.priority1.concat(m.priority2);
+  const vh = all.filter((r) => r.priority === "Very High").length;
+  const rows = (list, plain) => list.map((r) => '<li class="cr"><span class="cr-t">' + esc(r.topic) + "</span>" + (plain ? "" : '<span class="pr ' + priorityClass(r.priority) + '">' + esc(r.priority) + "</span>") + '<span class="cr-i">' + esc(r.importance) + "</span></li>").join("");
+  return '<section class="cmp-col" aria-label="' + attr(m.id.toUpperCase()) + '">' +
+    '<a class="cmp-h" href="#' + m.id + '" data-go="' + m.id + '"><b>' + m.id.toUpperCase() + "</b><span>" + esc(m.title) + "</span></a>" +
+    '<div class="stat"><span class="pill marks-pill' + (m.marks >= 20 ? " big" : "") + '">' + (m.marks || "–") + " marks</span><span class=\"pill\">" + all.length + " topics</span>" + (vh ? '<span class="pill">' + vh + " very high</span>" : "") + "</div>" +
+    (m.plain ? "" : '<span class="chip p1">Must prepare · ' + m.priority1.length + "</span>") + '<ul class="cl">' + rows(m.plain ? all : m.priority1, m.plain) + "</ul>" +
+    (m.plain || !m.priority2.length ? "" : '<span class="chip p2">Important · ' + m.priority2.length + '</span><ul class="cl">' + rows(m.priority2, false) + "</ul>") +
+    "</section>";
+}
+function renderCompare() {
+  const opts = (n) => MODS.map((m, i) => '<option value="' + i + '"' + (i === n ? " selected" : "") + ">" + m.id.toUpperCase() + " · " + esc(m.title) + "</option>").join("");
+  const a = MODS[cmpA], b = MODS[cmpB];
+  bodyEl.innerHTML = "<h1>Compare modules</h1>" +
+    '<p class="sub">See where the marks and priority topics sit before you choose what to skip.</p>' +
+    '<div class="cmp-pick"><label>Left<select id="cmpSelA">' + opts(cmpA) + '</select></label>' +
+    '<button type="button" class="icon-btn" id="cmpSwap" aria-label="Swap sides" title="Swap sides">&#8644;</button>' +
+    '<label>Right<select id="cmpSelB">' + opts(cmpB) + "</select></label></div>" +
+    (a && b ? '<div class="cmp">' + cmpCol(a) + cmpCol(b) + "</div>" +
+      '<p class="note">Combined: ' + ((a.marks || 0) + (b.marks || 0)) + " marks · " + (a.priority1.length + b.priority1.length) + " must-prepare topics.</p>" : "");
+  const sa = document.getElementById("cmpSelA"), sb = document.getElementById("cmpSelB");
+  const upd = (x, y) => go("compare-" + MODS[x].id + "-" + MODS[y].id);
+  sa.onchange = () => upd(+sa.value, cmpB);
+  sb.onchange = () => upd(cmpA, +sb.value);
+  document.getElementById("cmpSwap").onclick = () => upd(cmpB, cmpA);
+}
+
+/* ---------- keyboard: J/K topics, arrows modules ---------- */
+function paintSel(scroll) {
+  const cards = bodyEl.querySelectorAll(".tg .tc");
+  cards.forEach((c, i) => c.classList.toggle("sel", i === sel));
+  if (scroll && cards[sel]) cards[sel].scrollIntoView({ block: "center", behavior: STILL ? "auto" : "smooth" });
+}
+function moveTopic(d) {
+  const n = bodyEl.querySelectorAll(".tg .tc").length;
+  if (!n) return;
+  sel = sel < 0 ? (d > 0 ? 0 : n - 1) : Math.max(0, Math.min(n - 1, sel + d));
+  paintSel(true);
+}
+function moveTab(d) {
+  const n = view === "fat" ? PAPERS.length : MODS.length;
+  const i = view === "fat" ? curP : cur;
+  const j = i + d;
+  if (j < 0 || j >= n) return;
+  go(view === "fat" ? "fat-" + PAPERS[j].id.toLowerCase() : MODS[j].id);
+}
+function onKey(e) {
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  const el = document.activeElement || {};
+  if (/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName || "") || el.isContentEditable) return;
+  if (!READY) return;
+  const k = e.key.toLowerCase();
+  if (view === "cloud" || view === "fat") {
+    if (e.key === "ArrowRight") { e.preventDefault(); moveTab(1); return; }
+    if (e.key === "ArrowLeft") { e.preventDefault(); moveTab(-1); return; }
+  }
+  if (view === "cloud" && (k === "j" || k === "k")) { e.preventDefault(); moveTopic(k === "j" ? 1 : -1); return; }
+  if (k === "c" && MODS.length > 1) { e.preventDefault(); go(view === "compare" ? MODS[cur].id : "compare-" + MODS[cmpA].id + "-" + MODS[cmpB].id); }
 }
 
 /* ---------- fluid tabs: sliding active + hover pills ---------- */
@@ -239,30 +335,40 @@ function buildTabs() {
 }
 function render() {
   const term = q.value.trim().toLowerCase();
-  if (view !== "imp" && builtView !== view) {
+  const bare = view === "imp" || view === "distr" || view === "compare";
+  if (!bare && builtView !== view) {
     buildTabs();
     builtView = view;
   }
-  titleEl.textContent = view === "fat" ? "fat" : view === "imp" ? "imp" : "dbms";
+  titleEl.textContent = view === "fat" ? "fat" : view === "imp" ? "imp" : view === "distr" ? "distr" : view === "compare" ? "compare" : "dbms";
   tabsEl.hidden = !tabList().length;
   heroEl.hidden = view !== "cloud";
   backEl.hidden = view === "cloud";
-  fatEl.hidden = view !== "cloud";
   impEl.hidden = view !== "cloud";
-  tabsRowEl.hidden = view === "imp";
-  if (view === "imp") {
+  distrEl.hidden = view !== "cloud";
+  cmpEl.hidden = view !== "cloud" || MODS.length < 2;
+  tabsRowEl.hidden = bare;
+  if (bare) {
     countEl.hidden = true;
     q.placeholder = "Search is available on the cloud and fat pages";
-    return renderImp();
+    return view === "imp" ? renderImp() : view === "distr" ? renderDistr() : renderCompare();
   }
   q.placeholder = view === "fat" ? "Search by question no. (Q5) or text" : MODS.length ? "Search topics" : "Search is available on the fat page";
   if (view === "fat") renderFat(term);
-  else renderCloud(term);
+  else { renderCloud(term); if (sel >= 0) paintSel(false); }
 }
 function parse(hash) {
   const h = (hash || "").replace("#", "").toLowerCase();
-  if (h === "imp") {
+  if (h.startsWith("compare")) {
+    view = "compare";
+    const [, x, y] = h.split("-");
+    const i = MODS.findIndex((m) => m.id === x), j = MODS.findIndex((m) => m.id === y);
+    if (i !== -1 && j !== -1) { cmpA = i; cmpB = j; }
+    else { cmpA = Math.min(cmpA, MODS.length - 1); cmpB = Math.min(cmpB, MODS.length - 1); }
+  } else if (h === "imp") {
     view = "imp";
+  } else if (h === "distr") {
+    view = "distr";
   } else if (h.startsWith("fat")) {
     view = "fat";
     const id = h.split("-")[1];
@@ -275,8 +381,9 @@ function parse(hash) {
   }
 }
 function go(hash) {
-  const before = view;
+  const before = view, beforeCur = cur;
   parse(hash);
+  if (before !== view || beforeCur !== cur) sel = -1;
   if (before !== view) q.value = "";
   try {
     if (location.hash !== "#" + hash) location.hash = hash;
@@ -338,9 +445,11 @@ async function init() {
     if (e.key === "/" && !typing && !e.metaKey && !e.ctrlKey) { e.preventDefault(); q.focus(); }
     else if (e.key === "Escape" && document.activeElement === q) { q.value = ""; render(); q.blur(); }
   });
-  fatEl.onclick = () => window.open("https://db-fat.vercel.app/", "_blank", "noopener");
   impEl.onclick = () => go("imp");
-  backEl.onclick = () => go(view === "imp" && MODS[cur] ? MODS[cur].id : "m1");
+  distrEl.onclick = () => go("distr");
+  cmpEl.onclick = () => go("compare-" + MODS[cmpA].id + "-" + MODS[cmpB].id);
+  document.addEventListener("keydown", onKey);
+  backEl.onclick = () => go((view === "imp" || view === "distr" || view === "compare") && MODS[cur] ? MODS[cur].id : "m1");
   bodyEl.addEventListener("click", (e) => {
     const dbtn = e.target.closest ? e.target.closest("[data-done]") : null;
     if (dbtn && MODE !== "study") return;
@@ -357,7 +466,9 @@ async function init() {
   });
   window.addEventListener("hashchange", () => {
     if (!READY) return;
+    const bc = cur, bv = view;
     parse(location.hash);
+    if (bc !== cur || bv !== view) sel = -1;
     render();
   });
 
@@ -373,3 +484,4 @@ async function init() {
 }
 
 init();
+
