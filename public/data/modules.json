@@ -1,0 +1,330 @@
+[
+ {
+  "id": "m1",
+  "title": "Database Systems Concepts and Architecture",
+  "priority1": [
+   {
+    "topic": "Three-Schema Architecture",
+    "importance": "Very High (6+) · Theory",
+    "priority": "Very High"
+   },
+   {
+    "topic": "Logical & Physical Data Independence",
+    "importance": "Very High (5+) · Theory",
+    "priority": "Very High"
+   },
+   {
+    "topic": "Centralized & Client/Server Architecture",
+    "importance": "High (3+) · Theory",
+    "priority": "High"
+   }
+  ],
+  "priority2": [
+   {
+    "topic": "Database Schema vs Database State",
+    "importance": "Medium (1–2) · Theory",
+    "priority": "Medium"
+   },
+   {
+    "topic": "Data Abstraction and Data Models",
+    "importance": "Medium (1–2) · Theory",
+    "priority": "Medium"
+   },
+   {
+    "topic": "Database Administrator and Actors",
+    "importance": "No clear evidence · Theory",
+    "priority": "Low"
+   }
+  ],
+  "marks": 10
+ },
+ {
+  "id": "m2",
+  "title": "Relational Model and E-R Modeling",
+  "priority1": [
+   {
+    "topic": "ER Diagram Design",
+    "importance": "Very High (7+) · Problem",
+    "priority": "Very High"
+   },
+   {
+    "topic": "ER to Relational Schema Mapping",
+    "importance": "High (3+) · Problem",
+    "priority": "High"
+   },
+   {
+    "topic": "Cardinality & Participation Constraints",
+    "importance": "High (4+) · Problem",
+    "priority": "High"
+   },
+   {
+    "topic": "Entity, Attributes & Relationships",
+    "importance": "Very High (7+) · Both",
+    "priority": "Very High"
+   }
+  ],
+  "priority2": [
+   {
+    "topic": "Generalization & Specialization",
+    "importance": "Medium (2) · Theory",
+    "priority": "Medium"
+   },
+   {
+    "topic": "Candidate Keys, Primary Keys & Foreign Keys",
+    "importance": "Medium (2) · Problem",
+    "priority": "Medium"
+   },
+   {
+    "topic": "Integrity Constraints and Handling of Nulls",
+    "importance": "No clear evidence · Theory",
+    "priority": "Low"
+   }
+  ],
+  "marks": 10
+ },
+ {
+  "id": "m3",
+  "title": "Relational Database Design",
+  "priority1": [
+   {
+    "topic": "Functional Dependencies",
+    "importance": "Very High (6+) · Problem",
+    "priority": "Very High"
+   },
+   {
+    "topic": "Normalization up to 3NF",
+    "importance": "Very High (5+) · Problem",
+    "priority": "Very High"
+   },
+   {
+    "topic": "Candidate Key Identification",
+    "importance": "Very High (4+) · Problem",
+    "priority": "Very High"
+   },
+   {
+    "topic": "Minimal / Canonical Cover",
+    "importance": "High (3+) · Problem",
+    "priority": "High"
+   },
+   {
+    "topic": "Armstrong's Axioms",
+    "importance": "High (3+) · Problem",
+    "priority": "High"
+   },
+   {
+    "topic": "BCNF",
+    "importance": "High (2+) · Problem",
+    "priority": "High"
+   }
+  ],
+  "priority2": [
+   {
+    "topic": "Dependency Preservation",
+    "importance": "Medium (1–2) · Problem",
+    "priority": "Medium"
+   },
+   {
+    "topic": "4NF – Multivalued Dependency",
+    "importance": "No clear evidence · Problem",
+    "priority": "Low"
+   },
+   {
+    "topic": "5NF – Join Dependency",
+    "importance": "No clear evidence · Problem",
+    "priority": "Low"
+   }
+  ],
+  "marks": 20
+ },
+ {
+  "id": "m4",
+  "title": "Physical Database Design and Query Processing",
+  "priority1": [
+   {
+    "topic": "B+ Tree Indexing – Insertion & Deletion",
+    "importance": "Very High (4+) · Problem",
+    "priority": "Very High"
+   },
+   {
+    "topic": "Static Hashing",
+    "importance": "Very High (3+) · Problem",
+    "priority": "Very High"
+   },
+   {
+    "topic": "Dynamic Hashing / Extendible Hashing",
+    "importance": "High (2+) · Problem",
+    "priority": "High"
+   },
+   {
+    "topic": "Quadratic Probing / Double Hashing",
+    "importance": "High (2+) · Problem",
+    "priority": "High"
+   },
+   {
+    "topic": "Relational Algebra",
+    "importance": "High (3+) · Problem",
+    "priority": "High"
+   },
+   {
+    "topic": "Heuristic Query Optimization",
+    "importance": "High (2+) · Problem",
+    "priority": "High"
+   }
+  ],
+  "priority2": [
+   {
+    "topic": "Query Trees and Optimization",
+    "importance": "Medium (2) · Problem",
+    "priority": "Medium"
+   },
+   {
+    "topic": "Multilevel Indexing",
+    "importance": "Medium (1) · Theory",
+    "priority": "Medium"
+   },
+   {
+    "topic": "File Organization",
+    "importance": "No clear evidence · Theory",
+    "priority": "Low"
+   },
+   {
+    "topic": "Tuple Relational Calculus",
+    "importance": "No clear evidence · Problem",
+    "priority": "Low"
+   }
+  ],
+  "marks": 20
+ },
+ {
+  "id": "m5",
+  "title": "Transaction Processing and Recovery",
+  "priority1": [
+   {
+    "topic": "Conflict Serializability",
+    "importance": "Very High (5+) · Problem",
+    "priority": "Very High"
+   },
+   {
+    "topic": "Recoverable, Cascadeless & Strict Schedules",
+    "importance": "Very High (3+) · Problem",
+    "priority": "Very High"
+   },
+   {
+    "topic": "Deferred & Immediate Database Modification",
+    "importance": "High (2+) · Problem",
+    "priority": "High"
+   },
+   {
+    "topic": "Log-Based Recovery Protocols",
+    "importance": "High (2+) · Problem",
+    "priority": "High"
+   }
+  ],
+  "priority2": [
+   {
+    "topic": "Shadow Paging",
+    "importance": "Medium (1–2) · Theory",
+    "priority": "Medium"
+   },
+   {
+    "topic": "ACID Properties",
+    "importance": "Medium (1–2) · Theory",
+    "priority": "Medium"
+   },
+   {
+    "topic": "Transaction States",
+    "importance": "Medium (1–2) · Theory",
+    "priority": "Medium"
+   }
+  ],
+  "marks": 20
+ },
+ {
+  "id": "m6",
+  "title": "Concurrency Control in Transaction Processing",
+  "priority1": [
+   {
+    "topic": "Two-Phase Locking (2PL)",
+    "importance": "Very High (5+) · Both",
+    "priority": "Very High"
+   },
+   {
+    "topic": "Deadlock Detection – Wait-for Graph",
+    "importance": "Very High (3+) · Problem",
+    "priority": "Very High"
+   },
+   {
+    "topic": "Lock-Based Protocols",
+    "importance": "Very High (3+) · Both",
+    "priority": "Very High"
+   },
+   {
+    "topic": "Timestamp-Based Protocols",
+    "importance": "High (2+) · Problem",
+    "priority": "High"
+   },
+   {
+    "topic": "Deadlock Prevention Techniques",
+    "importance": "High (2+) · Theory",
+    "priority": "High"
+   }
+  ],
+  "priority2": [
+   {
+    "topic": "Lock Compatibility Matrix",
+    "importance": "Medium (1–2) · Problem",
+    "priority": "Medium"
+   },
+   {
+    "topic": "Multi-Granularity Locking",
+    "importance": "Medium (1–2) · Both",
+    "priority": "Medium"
+   },
+   {
+    "topic": "Graph-Based Protocols",
+    "importance": "No clear evidence · Theory",
+    "priority": "Low"
+   },
+   {
+    "topic": "Thomas Write Rule",
+    "importance": "Medium (1) · Problem",
+    "priority": "Medium"
+   }
+  ],
+  "marks": 20
+ },
+ {
+  "id": "m7",
+  "title": "NoSQL Database Management",
+  "priority1": [
+   {
+    "topic": "CAP Theorem",
+    "importance": "Very High (4+) · Theory",
+    "priority": "Very High"
+   },
+   {
+    "topic": "Types of NoSQL Databases",
+    "importance": "Very High (4+) · Theory",
+    "priority": "Very High"
+   },
+   {
+    "topic": "Document Database / MongoDB Operations",
+    "importance": "High (1–2) · Problem",
+    "priority": "High"
+   },
+   {
+    "topic": "NoSQL Applications and Use Cases",
+    "importance": "High (2+) · Theory",
+    "priority": "High"
+   }
+  ],
+  "priority2": [
+   {
+    "topic": "Need and Characteristics of NoSQL",
+    "importance": "Medium (1) · Theory",
+    "priority": "Medium"
+   }
+  ],
+  "marks": 20
+ }
+]
