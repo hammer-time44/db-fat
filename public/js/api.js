@@ -9,5 +9,6 @@ async function get(file) {
 
 export const Api = {
   modules: () => get("modules.json"),
-  papers: () => get("papers.json")
+  papers: () => get("papers.json"),
+  topics: () => get("topics.json")
 };

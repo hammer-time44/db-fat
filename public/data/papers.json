@@ -1,1 +1,1996 @@
-[]
+[
+ {
+  "id": "A1-23-24",
+  "exam": "Final Assessment Test – July 2023",
+  "course": "BCSE302L - Database Systems",
+  "slot": "A1+TA1",
+  "note": "Answer ALL Questions (10 X 10 = 100 Marks)",
+  "pages": 3,
+  "questions": [
+   {
+    "number": 1,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Consider a typical online course registration system such as Coursera or Udacity. How do you enforce the concept of data abstraction and data independence by elaborating each level of abstraction with your example?",
+      "co": "",
+      "bl": "",
+      "marks": "5",
+      "modules": [
+       "m1"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Describe briefly the function of the catalog in a DBMS. Show clearly how the catalog allows the DBMS to provide data independence and why data modelling is important?",
+      "co": "",
+      "bl": "",
+      "marks": "5",
+      "modules": [
+       "m1"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 1,
+    "y": 0.07
+   },
+   {
+    "number": 2,
+    "parts": [
+     {
+      "label": "",
+      "text": "Major airline companies that provide passenger services in Singapore are UniAir, TransAsia Airways, Far Eastern Transport, Great China Airlines, etc. Singapore Federal Flight Administration (SFFA) keeps a database with lots of information on all airlines. The information consists of:  Each airplane has an identification number, name of the contact person, and telephone number. For each aircraft identification number, capacity and model are recorded.\n\nEach employee has an employee identification number, name, address, birthday, sex, position with the company and qualification.\n\nEach route has a route identification number, origin, destination, classification (into domestic or international route), distance of the route and price charged per passenger.\n\nEach airline keeps the information about their buy/sell transactions (for example, selling an airplane ticket is a sell transaction, and paying for maintenance is a buy transaction). Each transaction has a transaction identification number, date, description, and amount of money paid/received.\n\nDesign a suitable ER diagram for the above scenario with all possible entities, attributes and the corresponding relationship with its participations.",
+      "co": "",
+      "bl": "",
+      "marks": "",
+      "modules": [
+       "m2"
+      ]
+     }
+    ],
+    "pg": 1,
+    "y": 0.33
+   },
+   {
+    "number": 3,
+    "parts": [
+     {
+      "label": "a",
+      "text": "A relation IADDR is defined with attributes NAME (unique), STREET, CITY, STATE and POSTCODE for storing the customer address details. The functional dependencies of the relation are given below:\n\nPOSTCODE → CITY, STATE\nSTREET, CITY, STATE → POSTCODE\nNAME → STREET, CITY, STATE\nCheck if the given relation is in BCNF? 3NF? 2NF?",
+      "co": "",
+      "bl": "",
+      "marks": "5",
+      "modules": [
+       "m3"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Consider the following relation scheme R (A, B, C, D, E, F, G, H, I, J} together with the following functional dependencies: {F→ H, E}, {{C, G, A}→{B, D, J}}, {{B}→{A, I}}, {B, G}→ {C}. Use Armstrong's axioms to prove formally that this set of functional dependencies implies that {B, G} → {D}.",
+      "co": "",
+      "bl": "",
+      "marks": "5",
+      "modules": [
+       "m3"
+      ],
+      "and": true,
+      "pg": 2,
+      "y": 0.07
+     }
+    ],
+    "pg": 1,
+    "y": 0.82
+   },
+   {
+    "number": 4,
+    "parts": [
+     {
+      "label": "",
+      "text": "A relation R has attributes A, B, C, D, E, and satisfies the following FDs:\n\nA→BC\nB→D\nCD→E\nE→A\n\na) Show that (A, B, C) and (A, D, E) are a lossless decomposition of R.  [3]\nb) Show that (A, B, C) and (C, D, E) are not a lossless decomposition of R.  [3]\nc) Show that (A, B, C) and (A, D, E) are not a dependency preserving decomposition of R.  [4]",
+      "co": "",
+      "bl": "",
+      "marks": "",
+      "modules": [
+       "m3"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.2
+   },
+   {
+    "number": 5,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider the following tables. Write a SQL to find out the customer id of any customer who has ordered the product \"Queso Cabrales\" with quantity >6. Transform the SQL into a collection of relational algebra which denotes different execution plans of the SQL. Also, visualize the answer with the help of the Query tree.\n\nOrders\n| Order ID | Customer ID |\n| 10263 | Wilmk |\n| 10311 | Dumon |\n\nProducts\n| Product ID | Product Name |\n| 11 | Queso Cabrales |\n| 42 | Singaporena Fried |\n| 69 | Gudbrandsdalsost |\n| 72 | Mozzarella di Giovanni |\n\nOrders Details\n| OrderID | ProductID | UnitPrice | Quantity |\n| 10263 | 11 | 21.00 | 12 |\n| 10263 | 42 | 14.00 | 10 |\n| 10263 | 72 | 34.80 | 5 |\n| 10311 | 42 | 14.00 | 6 |\n| 10311 | 69 | 28.80 | 7 |",
+      "co": "",
+      "bl": "",
+      "marks": "",
+      "modules": [
+       "m4"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.45
+   },
+   {
+    "number": 6,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider a B+-tree of order three. Show the results of entering one by one the keys that are three letter strings: (era, ban, bat, kin, day, log, rye, max, won, ace, ado, bug, cop, gag, let, fax ) (in that order) to an initially empty B+-tree. Assume that you use lexicographic ordering to compare the strings. Show the state of the tree after every 4 insertions.",
+      "co": "",
+      "bl": "",
+      "marks": "",
+      "modules": [
+       "m4"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.82
+   },
+   {
+    "number": 7,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider the following 3 schedules for 3 concurrent transactions T1, T2, T3\n\nS1 = {r2(c), r2(b), w2(b), r3(b), r3(d), r3(c), r1(a), w1(a), w3(b), w3(c), r2(a), r2(d), w2(d), r1(b), w1(b), w2(a)}\nS2 = {r3(b), r3(c), r3(d), r1(a), w1(a), w3(b), w3(c), r2(c), r1(b), w1(b), r2(b), w2(b), r2(a), w2(a), r2(d), w2(d)}\nS3 = {r1(a), w1(a), r2(c), r2(b), w2(b), r2(d), r2(a), w2(a), w2(d), r1(b), w2(b), r3(b), r3(c), w3(b), w3(c), r3(d)}\n\nFor each of the three interleaved schedules, determine if the schedule is serializable. If so give an equivalent serial schedule.",
+      "co": "",
+      "bl": "",
+      "marks": "",
+      "modules": [
+       "m5"
+      ]
+     }
+    ],
+    "pg": 3,
+    "y": 0.07
+   },
+   {
+    "number": 8,
+    "parts": [
+     {
+      "label": "",
+      "text": "Discuss the timestamp ordering protocol for concurrency control. How does strict timestamp ordering differ from basic timestamp ordering?",
+      "co": "",
+      "bl": "",
+      "marks": "",
+      "modules": [
+       "m6"
+      ]
+     }
+    ],
+    "pg": 3,
+    "y": 0.28
+   },
+   {
+    "number": 9,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Describe the shadow paging recovery technique.",
+      "co": "",
+      "bl": "",
+      "marks": "5",
+      "modules": [
+       "m5"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Prove that the wait-die and wound-wait protocols avoid deadlock and starvation.",
+      "co": "",
+      "bl": "",
+      "marks": "5",
+      "modules": [
+       "m6"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 3,
+    "y": 0.35
+   },
+   {
+    "number": 10,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Consider an e-commerce website with a global presence. Some of the key areas for data management are maintaining user sessions, secured and reliable financial data management, shopping cart management, recommendation of products, maintaining product catalog, generating reports, performing analytics, and logging user activities. For the above scenario, choose the appropriate database and justify in terms of CAP theorem and BASE properties.",
+      "co": "",
+      "bl": "",
+      "marks": "5",
+      "modules": [
+       "m7"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Which of the four NoSQL database types is more suitable for storing session details? Justify by explaining the features of the database chosen.",
+      "co": "",
+      "bl": "",
+      "marks": "5",
+      "modules": [
+       "m7"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 3,
+    "y": 0.5
+   }
+  ]
+ },
+ {
+  "id": "A1-24-25",
+  "exam": "Final Assessment Test – Fall 2024-25 Semester - Nov 2024 KEY",
+  "course": "BCSE302L - Database Systems",
+  "slot": "A1+TA1",
+  "note": "Answer ALL Questions (10 X 10 = 100 Marks)",
+  "pages": 14,
+  "questions": [
+   {
+    "number": 1,
+    "parts": [
+     {
+      "label": "",
+      "text": "Discuss three-schema architecture used in database management. What are the key components, and how do they interact with each other? Why do we need mappings between schema levels?",
+      "co": "CO1",
+      "bl": "L1",
+      "marks": "10",
+      "modules": [
+       "m1"
+      ]
+     }
+    ],
+    "pg": 1,
+    "y": 0.42
+   },
+   {
+    "number": 2,
+    "parts": [
+     {
+      "label": "",
+      "text": "Design an Entity-Relationship Diagram (ER Diagram) for a Hospital Management System (HMS) that enables the registration and management of patient information, including demographics, medical history, and current condition, while featuring a doctor directory that maintains details such as specialties, contact information, and availability. The system should assist in room management by identifying available and occupied rooms, and handle nurse information, including departmental assignments and shift schedules. Additionally, it must provide functionality for generating, storing, and retrieving patient test reports with detailed results and dates, while managing records through unique identification numbers for easy reference. Billing functionality is crucial for handling billing information, including bill generation and payment tracking, and the system should support receptionist functions for retrieving patient data and scheduling appointments. Your task is to create an ER diagram that includes relevant entities, attributes and relationships, indicating cardinality and participation constraints.\n{{fig:A1-24-25-q2}}",
+      "co": "CO2",
+      "bl": "L3",
+      "marks": "10",
+      "modules": [
+       "m2"
+      ]
+     }
+    ],
+    "pg": 1,
+    "y": 0.8
+   },
+   {
+    "number": 3,
+    "parts": [
+     {
+      "label": "",
+      "text": "Discuss the concepts of generalization and specialization in database design, using the extended entity-relationship model as a framework. Provide examples to illustrate these concepts and analyze the various types of constraints, including disjointness and completeness, and their impact on subclass relationships and the overall superclass structure.",
+      "co": "CO2",
+      "bl": "L2",
+      "marks": "10",
+      "modules": [
+       "m2"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.53
+   },
+   {
+    "number": 4,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider relation R(X,Y,Z,W,V) with the following functional dependencies:\n   X→Y\n   Y→Z\n   Z→W\n   W→X\nThe decomposed Relations are R1(X,Y,Z)and R2(Z,W,V). Find if all the original dependencies are preserved or not.",
+      "co": "CO2",
+      "bl": "L3",
+      "marks": "10",
+      "modules": [
+       "m3"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.82
+   },
+   {
+    "number": 5,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider the relation R(P,Q,R,S,T,U,V,W,X,Y)with the following set of functional dependencies:\n\n   PQ→R\n   P→ST\n   Q→UV\n   U→WX\n   S→Y\n\n   Normalize the schema into Third Normal Form (3NF). Provide the resulting relations and explain the decomposition process for any violations encountered.",
+      "co": "CO2",
+      "bl": "L3",
+      "marks": "10",
+      "modules": [
+       "m3"
+      ]
+     }
+    ],
+    "pg": 3,
+    "y": 0.25
+   },
+   {
+    "number": 6,
+    "parts": [
+     {
+      "label": "",
+      "text": "You are the database administrator for an e-commerce platform that processes customer orders and manages payment transactions. When users transfer funds between their accounts, the system ensures that funds are only deducted after the user confirms the transaction. Simultaneously, the platform allows customers to place orders, reflecting inventory changes in real-time to prevent overselling of items. To safeguard against system failures, the application creates backup copies of database pages for quick recovery. This layered database recovery approach aims to maintain data integrity and reliability while providing a seamless user experience, even in the event of a transaction error or system crash.\n\nI. Identify and describe the approach taken for handling fund transfers and explain why this method is suitable for this scenario.\n\nii. Explain the backup strategy implemented for recovering the database. How does this method enhance the recovery process, and what are its limitations?",
+      "co": "CO4",
+      "bl": "L2",
+      "marks": "10",
+      "modules": [
+       "m5"
+      ]
+     }
+    ],
+    "pg": 3,
+    "y": 0.78
+   },
+   {
+    "number": 7,
+    "parts": [
+     {
+      "label": "",
+      "text": "Identify and justify how the following concurrency control problems affect data integrity and consistency in a multi-user environment.\n\nS1:  r1(x);r2(x);w1(x);r3(x);w2(x);c2;r4(x);w3(x);c3; w1(y);c1;\n\nS2: r1(x);w1(x);r2(x);w2(x);c2;r3(x);c3;w1(y);c1;\n\nS3: r1(x); w1(x); r2(x); w2(x); r1(x);",
+      "co": "CO4",
+      "bl": "L4",
+      "marks": "10",
+      "modules": [
+       "m6"
+      ]
+     }
+    ],
+    "pg": 4,
+    "y": 0.6
+   },
+   {
+    "number": 8,
+    "parts": [
+     {
+      "label": "",
+      "text": "Explain the CAP theorem and its implications for distributed system databases. Analyze how the CAP theorem influences the database design choices of an online shopping platform, focusing on the trade-offs between consistency, availability, and partition tolerance.",
+      "co": "CO5",
+      "bl": "L1",
+      "marks": "10",
+      "modules": [
+       "m7"
+      ]
+     }
+    ],
+    "pg": 5,
+    "y": 0.1
+   },
+   {
+    "number": 9,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Show the B+ tree that would be formed by inserting the month names (12 strings) into a tree in their normal calendar sequence (jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec). After the construction, delete the entries for dec and mar.\n{{fig:A1-24-25-q9-order3}}\n{{fig:A1-24-25-q9-order4}}",
+      "co": "CO3",
+      "bl": "L3",
+      "marks": "10",
+      "modules": [
+       "m4"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Insert the elements 15,20,25 and 30 into a hash table of size 10. Assume that the h1(k) = 2K+3.  The hash value is calculated from the formula h1(k) % table size. The Tables do not need to be resized. If an element cannot be inserted successfully, state why. You need to display it up to the final table.\n\ni.  Perform quadratic probing\nii. Perform Double Hashing by using the secondary hash function h2(k) = 3K+1",
+      "co": "CO3",
+      "bl": "L3",
+      "marks": "10",
+      "modules": [
+       "m4"
+      ],
+      "pg": 5,
+      "y": 0.45
+     }
+    ],
+    "pg": 5,
+    "y": 0.37
+   },
+   {
+    "number": 10,
+    "parts": [
+     {
+      "label": "a",
+      "text": "i. Discuss different types of Two-Phase Locking (2PL) algorithms with an example.\n\nConsider the following two transactions and schedule (time goes from top to bottom).\n\n| T1 | T2 |\n| Read A | |\n| Write A | |\n| | Read A |\n| | Read B |\n| | Commit |\n| Read B | |\n| Write B | |\n| Commit | |\n\nii. Demonstrate how Two-Phase Locking (2PL) ensures a conflict-serializable schedule for the transactions mentioned above, using the notation Li[x] to indicate that transaction i acquires a lock on element x and Ui[x] to indicate that transaction i releases its lock on x.\n\niii. Illustrate how using locks without 2PL can result in a schedule that is not conflict-serializable.",
+      "co": "CO4",
+      "bl": "L3",
+      "marks": "10",
+      "modules": [
+       "m6"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Consider the following transactions with their respective timestamps:\n\nT1: Timestamp = 150\nT2: Timestamp = 250\nT3: Timestamp = 350\n\nGiven the schedule of operations:\n\nS: R1(X); R2(Y); W1(Z); R3(Y); W2(X); R1(Y); W3(Z)\n\ni.  Apply the Timestamp Ordering Protocol to determine the order of transaction execution.\nii. Identify which operations are allowed and which are aborted based on the protocol rules.\niii. Explain the reasons for any transaction aborts in the schedule and discuss how this affects the overall consistency of the transactions.",
+      "co": "CO4",
+      "bl": "L3",
+      "marks": "10",
+      "modules": [
+       "m6"
+      ],
+      "pg": 9,
+      "y": 0.7
+     }
+    ],
+    "pg": 9,
+    "y": 0.24
+   }
+  ]
+ },
+ {
+  "id": "A2-24-25",
+  "exam": "Final Assessment Test - November 2024",
+  "course": "BCSE302L - Database Systems",
+  "slot": "A2+TA2",
+  "note": "Answer ALL Questions (10 X 10 = 100 Marks)",
+  "pages": 5,
+  "questions": [
+   {
+    "number": 1,
+    "parts": [
+     {
+      "label": "i",
+      "text": "Explain the difference between a database schema and a database state with a suitable example.",
+      "co": "",
+      "bl": "",
+      "marks": "4",
+      "modules": [
+       "m1"
+      ]
+     },
+     {
+      "label": "ii",
+      "text": "Differentiate between logical data independence and physical data independence, providing examples to illustrate their concepts. Finally, discuss the challenges and benefits associated with achieving these levels of data independence.",
+      "co": "",
+      "bl": "",
+      "marks": "6",
+      "modules": [
+       "m1"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 1,
+    "y": 0.24
+   },
+   {
+    "number": 2,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Design an EER diagram to capture the requirements of an e-commerce platform that sells products online. The platform should allow users to browse products, add them to their shopping carts, checkout, and track their orders. Every product has a unique ID, name, description, price, quantity in stock, and category. Categories represent different product groups (e.g., electronics, clothing, books). Products can be categorized into different types (e.g., books, electronics, and clothing). Every customer has a unique ID, name, email, address, and shipping information. Each order has a unique ID, customer ID, order date, shipping address, and total amount. Each order can have multiple items. An order item specifies the product ID, quantity, and price. Each order has associated payment information, including payment method, transaction ID, and payment status. Customers can leave reviews for products, including a rating and a text comment. The platform can offer promotions and discounts on products.\nState any assumptions you have that affects your design. Clearly indicate primary keys and the cardinalities with which an entity participates in a relationship with a pair of (minimum, maximum) value.",
+      "co": "",
+      "bl": "",
+      "marks": "",
+      "modules": [
+       "m2"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Map the following ER diagram into relational schema(s) and specify all the relevant primary keys and foreign keys.\n{{fig:A2-24-25-q2}}",
+      "co": "",
+      "bl": "",
+      "marks": "",
+      "modules": [
+       "m2"
+      ],
+      "pg": 2,
+      "y": 0.03
+     }
+    ],
+    "pg": 1,
+    "y": 0.43
+   },
+   {
+    "number": 3,
+    "parts": [
+     {
+      "label": "",
+      "text": "Suppose we have a database for an investment firm, consisting of the following attributes:\nB – Broker,\nO – Office of a broker\nI – Investor\nS – Stock\nQ – Quantity of stock owned by an investor\nD – Dividend paid by a stock.\nHence, the overall schema is R = (B, O, I, S, Q, D).\nAssume that the following functional dependencies are required to hold on this database.\nFD = {I → B, IS → Q, B → O, S → D}\ni) List all the candidate keys for R.\nii) List the prime and non-prime attributes\niii) Classify to which normal form the present form of Relation R belongs to and justify the answer.\niv) Identify the FD's which violates the property of a particular normal form and perform lossless-join decomposition of R into subsequent normal forms (continue up to BCNF).",
+      "co": "",
+      "bl": "",
+      "marks": "",
+      "modules": [
+       "m3"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.5
+   },
+   {
+    "number": 4,
+    "parts": [
+     {
+      "label": "i",
+      "text": "Consider the following relation R = {A, B, C, D, E} and the two sets of functional dependencies:\nF1 = {A → B, A → C, B → D, C → E}\nF2 = {A → B, C → D, B → E}\nCheck whether F1 and F2 are equivalent.",
+      "co": "",
+      "bl": "",
+      "marks": "4",
+      "modules": [
+       "m3"
+      ]
+     },
+     {
+      "label": "ii",
+      "text": "Suppose you are given a relation R(A,B,C,D). For each of the following sets of FDs, assuming the followings are the only dependencies that hold for R. Identify the candidate key(s) for R. Also state whether or not the proposed decomposition of R into smaller relations is a good decomposition (lossy or lossless) and briefly explain why or why not.\na) B→C, D→A; decompose into BC and AD.\nb) A→BC, C→AD; decompose into ABC and AD.\nc) A→B, B→C, C→D; decompose into AB and ACD.",
+      "co": "",
+      "bl": "",
+      "marks": "6",
+      "modules": [
+       "m3"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 3,
+    "y": 0.06
+   },
+   {
+    "number": 5,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Suppose we start with an empty B+ tree and keys arrive in the following order:\n23, 7, 12, 20, 45, 30, 9, 14, 70, 25, 19, 8, 21, 17, 84. Construct a B+ tree of order 3.\nDelete 23, 9, 30, 20, 25 from the tree. Display the resultant tree after each deletion.",
+      "co": "",
+      "bl": "",
+      "marks": "",
+      "modules": [
+       "m4"
+      ]
+     },
+     {
+      "label": "b (i)",
+      "text": "Suppose that extendable hashing is being used on a database file that contains records with the following search key values: 8, 16, 4, 3, 14, 11, 12, 23, 42, 21.\nConstruct the extendable hash structure for this file using the lowest-bits for the hash function (after converting the numbers into its binary form). That is, records in a bucket of local depth 'd' agree on their rightmost 'n' bits. For example, the key 3 (0011) and 11 (1011) agree on their rightmost 3 bits (011). Each bucket can hold two records.\nAnswer the followings based on the constructed extendable hash structure.\n1) What is the global depth of the resulting directory?\n2) What is the local depth of the bucket contains key 14?",
+      "co": "",
+      "bl": "",
+      "marks": "5",
+      "modules": [
+       "m4"
+      ]
+     },
+     {
+      "label": "b (ii)",
+      "text": "Consider the following Publication Database\nAuthor\n| author_id | first_name | last_name |\n| 1 | John | McCarthy |\n| 2 | Dennis | Ritchie |\n| 3 | Ken | Thompson |\n| 4 | Claude | Shannon |\n| 5 | Alan | Turing |\n| 6 | Alonzo | Church |\n| 7 | Perry | White |\n| 8 | Moshe | Vardu |\n| 9 | Roy | Batty |\nAuthor_Publication\n| author_id | pub_id | author_pos |\n| 1 | 1 | 1 |\n| 2 | 2 | 1 |\n| 3 | 2 | 2 |\n| 4 | 3 | 1 |\n| 5 | 4 | 1 |\n| 5 | 5 | 1 |\n| 6 | 6 | 1 |\nBook\n| book_id | book_title | month | year | editor |\n| 1 | CACM | April | 1960 | 8 |\n| 2 | CACM | July | 1974 | 8 |\n| 3 | BST | July | 1948 | 2 |\n| 4 | LMS | November | 1936 | 7 |\n| 5 | Mind | October | 1950 | NULL |\n| 6 | AMS | Month | 1941 | NULL |\n| 7 | AAAI | July | 2012 | 9 |\n| 8 | NIPS | July | 2012 | 9 |\nPublication\n| pub-id | title | book_id |\n| 1 | LISP | 1 |\n| 2 | Unix | 2 |\n| 3 | Info Theory | 3 |\n| 4 | Turing Machines | 4 |\n| 5 | Turing Test | 5 |\n| 6 | Lambda Calculus | 6 |\nBased on the above database, answer the followings:\n1) Write a relational algebra expression that returns the names of all authors who have at least one publication in the database.\n2) Write a relational algebra expression that returns the names of all authors who are not book editors.\n3) What question does the following expression answer?\nAuthor * (Author_Publication * (σ_month='July' (Book) * Publication))\n4) What question does the following relational algebra expression answer?\n| ∏_author_id (author) - ∏_editor (book) |\n5) How many tuples are returned by the following relational algebra expression?\nauthor ⋈_author id=editor book",
+      "co": "",
+      "bl": "",
+      "marks": "5",
+      "modules": [
+       "m4"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 3,
+    "y": 0.28
+   },
+   {
+    "number": 6,
+    "parts": [
+     {
+      "label": "i",
+      "text": "For each of the following schedules, state whether they are serializable and conflict-serializable. For each schedule, draw the corresponding precedence graph. If the schedule is conflict-serializable, show all the conflict-equivalent serial schedules. If the schedule is not serializable, provide an initial DB state and some semantics (pseudo-code) for the transactions for which no serial schedule has the same net effect.\na) S1 = r1(A) r2(A) w1(A) w2(A)\nb) S2 = r1(A) r2(B) w3(A) r2(A) r1(B)\nc) S3 = r1(A) w2(A) w1(A) r3(A)",
+      "co": "",
+      "bl": "",
+      "marks": "6",
+      "modules": [
+       "m5"
+      ]
+     },
+     {
+      "label": "ii",
+      "text": "Based on the scenarios given below, find out appropriate ACID property the scenarios are referring to and discuss various validation strategies to test those scenarios.\na) A bank account has an initial balance of $100. A transaction transfers $50 to another account. The database must ensure that the total balance of all accounts remains consistent before and after the transaction.\nb) The system experiences a power outage during a transaction. The transaction should be recoverable upon system restart.\nc) Multiple customers are trying to purchase the last available item of a product. The system should ensure that only one customer is able to successfully purchase the item, preventing race conditions.\nd) A customer places an order for multiple items. The transaction should either be fully committed (all items are added to the order and payment is processed) or fully rolled back (no changes are made to the database).",
+      "co": "",
+      "bl": "",
+      "marks": "4",
+      "modules": [
+       "m5"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 4,
+    "y": 0.43
+   },
+   {
+    "number": 7,
+    "parts": [
+     {
+      "label": "",
+      "text": "Define conflict serializable, recoverable, cascadeless, and strict schedules.\nFor each of the following schedules, state which of the above mentioned properties hold. Justify your answer.\na) S1: R1(X), W2(X), W1(X), A2, C1\nb) S2: R1(X), W2(X), W1(X), C2, C1\nc) S3: R1(X), R2(X), W1(X), C1, W2(X), C2\nd) S4: W1(X), R2(X), W1(X), C2, A1\ne) S5: W1(X), R2(Y), R1(Y), R2(X), C1, C2\nf) S6: R1(X), R2(X), C1, W2(X), C2",
+      "co": "",
+      "bl": "",
+      "marks": "",
+      "modules": [
+       "m5"
+      ]
+     }
+    ],
+    "pg": 4,
+    "y": 0.71
+   },
+   {
+    "number": 8,
+    "parts": [
+     {
+      "label": "",
+      "text": "Analyze the trade-offs between different locking mechanisms and deadlock prevention protocols in terms of concurrency, performance, and overhead. Consider a scenario of a distributed database system, which is used to manage airline reservations, might encounter a deadlock situation. Explain how binary locks, exclusive/shared locks, and deadlock prevention protocols could be used to prevent or resolve the deadlock.",
+      "co": "",
+      "bl": "",
+      "marks": "",
+      "modules": [
+       "m6"
+      ]
+     }
+    ],
+    "pg": 5,
+    "y": 0.05
+   },
+   {
+    "number": 9,
+    "parts": [
+     {
+      "label": "i",
+      "text": "Explain why two-phase locking (2PL) is generally not used as a concurrency control method for indexes such as B+ trees. Provide a concrete example to illustrate the limitations of 2PL in this context.",
+      "co": "",
+      "bl": "",
+      "marks": "5",
+      "modules": [
+       "m6"
+      ]
+     },
+     {
+      "label": "ii",
+      "text": "Discuss the advantages and disadvantages of strict 2PL compared to other concurrency control mechanisms. Show that strict 2PL disallows the following schedule.\nR1(X) → R1(Y) → R2(X) → W2(X) → R2(Y) → W1(X) → W1(Y) → W2(Y) → C1→ C2",
+      "co": "",
+      "bl": "",
+      "marks": "5",
+      "modules": [
+       "m6"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 5,
+    "y": 0.24
+   },
+   {
+    "number": 10,
+    "parts": [
+     {
+      "label": "",
+      "text": "Given a large-scale e-commerce application that requires high availability, low latency, and the ability to handle massive amounts of transactional data, which NoSQL database types would be most suitable? Justify your answer with specific scenarios to illustrate the key considerations. Discuss why other NoSQL types might not be suitable.",
+      "co": "",
+      "bl": "",
+      "marks": "",
+      "modules": [
+       "m7"
+      ]
+     }
+    ],
+    "pg": 5,
+    "y": 0.48
+   }
+  ]
+ },
+ {
+  "id": "B1-25-26",
+  "exam": "Final Assessment Test - November 2025",
+  "course": "BCSE302L - Database Systems",
+  "slot": "B1+TB1",
+  "note": "Answer ALL Questions (10 X 10 = 100 Marks)",
+  "pages": 3,
+  "questions": [
+   {
+    "number": 1,
+    "parts": [
+     {
+      "label": "",
+      "text": "Compare and contrast centralized and client/server architectures for DBMS. Discuss the pros and cons of each approach?",
+      "co": "CO1",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m1"
+      ]
+     }
+    ],
+    "pg": 1,
+    "y": 0.56
+   },
+   {
+    "number": 2,
+    "parts": [
+     {
+      "label": "",
+      "text": "Imagine a university database system with the following requirements:\nThe university has many Departments, each with a unique name and location. Each Department offers several Courses; each course has a unique course ID, title, and credits. Professors teach courses; each professor has an ID, name, and rank. A professor can teach multiple courses, and each course can be taught by multiple professors. Students enroll in courses; each student has a student ID, name, major department, and email. Each enrollment records the student's grade in that course.\na) Draw an ER diagram (Chen notation) representing this scenario.\nb) Identify entity types, attributes (simple, composite, derived, multi-valued if any), and relationships.",
+      "co": "CO1",
+      "bl": "BL4",
+      "marks": "",
+      "modules": [
+       "m2"
+      ]
+     }
+    ],
+    "pg": 1,
+    "y": 0.6
+   },
+   {
+    "number": 3,
+    "parts": [
+     {
+      "label": "",
+      "text": "Given a relation schema:\nR(A, B, C, D, E, F, G) and the following set of functional dependencies\nF:{ A → B C, CD → E,B → D,E → F, F → G), use Armstrong's axioms to derive the closure of {A}. Explain each inference step in detail.",
+      "co": "CO2",
+      "bl": "BL3",
+      "marks": "",
+      "modules": [
+       "m3"
+      ]
+     }
+    ],
+    "pg": 1,
+    "y": 0.81
+   },
+   {
+    "number": 4,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider the following SQL query on relations Employees(EmpID, Name, DeptID), Departments(DeptID, DeptName), and Projects(ProjID, DeptID, Budget):\nSELECT E.Name, D.DeptName\nFROM Employees E\nJOIN Departments D ON E.DeptID = D.DeptID\nWHERE EXISTS (\n SELECT * FROM Projects P\n WHERE P.DeptID = D.DeptID AND P.Budget > 100000\n)\nTranslate this SQL query into the equivalent relational algebra expression using selection, projection and join.\nSuggest algebraic transformations to optimize the query execution.",
+      "co": "CO3",
+      "bl": "BL4",
+      "marks": "",
+      "modules": [
+       "m4"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.05
+   },
+   {
+    "number": 5,
+    "parts": [
+     {
+      "label": "",
+      "text": "Explain the concept of conflict serializability. Describe how to test for conflict serializability using precedence (conflict) graphs. Discuss with suitable example schedules.",
+      "co": "CO4",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m5"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.31
+   },
+   {
+    "number": 6,
+    "parts": [
+     {
+      "label": "i",
+      "text": "Describe the Two-Phase Locking protocol and its importance in ensuring serializability.",
+      "co": "CO5",
+      "bl": "BL3",
+      "marks": "4",
+      "modules": [
+       "m6"
+      ]
+     },
+     {
+      "label": "ii",
+      "text": "Discuss the differences between strict 2PL, rigorous 2PL, and basic 2PL, including their impact on system performance and recoverability.",
+      "co": "CO5",
+      "bl": "BL3",
+      "marks": "6",
+      "modules": [
+       "m6"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 2,
+    "y": 0.37
+   },
+   {
+    "number": 7,
+    "parts": [
+     {
+      "label": "i",
+      "text": "Explain the CAP theorem in the context of distributed NoSQL databases.",
+      "co": "CO5",
+      "bl": "BL1",
+      "marks": "4",
+      "modules": [
+       "m7"
+      ]
+     },
+     {
+      "label": "ii",
+      "text": "Discuss consistency, availability, and partition tolerance, and describe why a system can only guarantee two out of these three properties at any time.",
+      "co": "CO5",
+      "bl": "BL1",
+      "marks": "6",
+      "modules": [
+       "m7"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 2,
+    "y": 0.46
+   },
+   {
+    "number": 8,
+    "parts": [
+     {
+      "label": "",
+      "text": "Given the following keys to be inserted into a B+ Tree of order 3 (i.e., max 2 keys per node):\n[5, 15, 25, 35, 45, 55, 65, 75]\ni. Draw the resulting B+ Tree after all insertions.\nii. Explain why B+ Tree is preferred over B-Tree for implementing database indexes.\niii. Show how a range query like WHERE key BETWEEN 25 AND 65 is handled efficiently using the B+ Tree.",
+      "co": "CO3",
+      "bl": "BL3",
+      "marks": "10",
+      "modules": [
+       "m4"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.54
+   },
+   {
+    "number": 9,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Suppose we have a banking system with the following transactions running concurrently:\nT1: Transfers $200 from Account A to Account B.\nT2: Deposits $300 into Account A.\nT3: Reads the balance of Account A twice during concurrent operations.\nInitial account balances:\nAccount A: $1000\nAccount B: $500\ni. Illustrate how the Lost Update Problem can occur with T1 and T2.\nii. Demonstrate potential deadlock conditions involving T1 and T3.",
+      "co": "CO4",
+      "bl": "BL4",
+      "marks": "",
+      "modules": [
+       "m6"
+      ]
+     },
+     {
+      "label": "b (i)",
+      "text": "Discuss recovery methods based on immediate update. What measures ensure atomicity and durability in immediate update protocols?",
+      "co": "CO4",
+      "bl": "BL4",
+      "marks": "5",
+      "modules": [
+       "m5"
+      ],
+      "pg": 3,
+      "y": 0.08
+     },
+     {
+      "label": "b (ii)",
+      "text": "Discuss concepts of compensation log records and check pointing.",
+      "co": "CO4",
+      "bl": "BL4",
+      "marks": "5",
+      "modules": [
+       "m5"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 2,
+    "y": 0.7
+   },
+   {
+    "number": 10,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Compare the main characteristics and use cases of the following NoSQL database types: key-value stores, column-family stores, document databases, and graph databases. Provide practical scenarios where each is best suited.",
+      "co": "CO5",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m7"
+      ]
+     },
+     {
+      "label": "b (i)",
+      "text": "Analyze common causes of deadlocks in lock-based concurrency control.",
+      "co": "CO5",
+      "bl": "BL2",
+      "marks": "5",
+      "modules": [
+       "m6"
+      ]
+     },
+     {
+      "label": "b (ii)",
+      "text": "Explain detection algorithms like wait-for graphs and how cycle detection is performed. Provide an example illustrating deadlock detection and resolution.",
+      "co": "CO5",
+      "bl": "BL2",
+      "marks": "5",
+      "modules": [
+       "m6"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 3,
+    "y": 0.17
+   }
+  ]
+ },
+ {
+  "id": "B2-22-23",
+  "exam": "Final Assessment Test (FAT) - APRIL/MAY 2023",
+  "course": "DATABASE SYSTEMS (BCSE302L), B.Tech, Winter Semester 2022-23",
+  "slot": "B2+TB2",
+  "note": "PART-A (4 X 10 Marks) Answer All questions; PART-B (4 X 15 Marks) Answer All questions",
+  "pages": 3,
+  "questions": [
+   {
+    "number": 1,
+    "parts": [
+     {
+      "label": "",
+      "text": "An airline ticket booking database is designed to maintain geographically distributed reservations and to schedule information about the airline system. The secondary storage device holds information in the form of bytes and words. Previously, the computation was performed directly on this airline data. Because of the difficulty in obtaining and altering this data, the physical information was hidden and the data were presented as a series of tables. To make the data more intelligible to a greater number of individuals, the data might be presented in a variety of ways to accommodate the diverse audience. Discuss in detail the database architecture required to execute such mapping with appropriate record types or tables.",
+      "co": "",
+      "bl": "",
+      "marks": "10",
+      "modules": [
+       "m1"
+      ]
+     }
+    ],
+    "pg": 1,
+    "y": 0.3
+   },
+   {
+    "number": 2,
+    "parts": [
+     {
+      "label": "",
+      "text": "Check whether the given schedule S is conflict serializable, recoverable schedule or not. If it is conflict serializable, determine an equivalent serialized schedule. [10marks]\n| T1 | T2 | T3 | T4 |\n|  |  |  | R(A) |\n|  | R(A) |  |  |\n|  |  | R(A) |  |\n| W(B) |  |  |  |\n|  | W(A) |  |  |\n|  |  | R(B) |  |\n|  | W(B) |  |  |",
+      "co": "",
+      "bl": "",
+      "marks": "10",
+      "modules": [
+       "m5"
+      ]
+     }
+    ],
+    "pg": 1,
+    "y": 0.46
+   },
+   {
+    "number": 3,
+    "parts": [
+     {
+      "label": "",
+      "text": "An ABC Apartment with 1000 families would like to implement a system to manage various amenities in the Club House, like Gym, Yoga Hall, Swimming Pool, Mini Theater, Table Tennis Board Room, Tennis Court, etc. Each resident can avail any of these services from 8 am – 8 pm in one hour slot per activity/day. Without booking, no service can be availed and the system manager decides to use the NoSQL database to store the details.\ni) Create the following collections [3 marks]\na. \"Residents\" to store each member with a unique MemberID, Name, Phone number, ApartmentNumber.\nb. \"Amenities\" to store details like AmenityID, Amenity, InchargeName, InchargePhoneNumber of the club house.\nc. \"BookAmenity\" to store documents with AmenityID, MemberID, Date, Slot [8 AM -9 AM, 9 AM-10 AM, ... 7 PM -8 PM].\nii) Insert two documents in each collection with data of your choice. [2 marks]\niii) New Gym trainer/In charge got appointed and update his name, number in the \"Amenities\" collection. [1 mark]\niv) System manager wants to take the list of residents who utilise the amenities most, so display the MemberID, AmenityID along with its count in descending order. [2 marks]\nv) One of the families who stayed in 101 Apartment number got vacated and all the respective member documents need to be deleted in \"Residents\" collection. [2 marks]",
+      "co": "",
+      "bl": "",
+      "marks": "10",
+      "modules": [
+       "m7"
+      ]
+     }
+    ],
+    "pg": 1,
+    "y": 0.71
+   },
+   {
+    "number": 4,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider the below-given schema of the hotel reservations database:\nHotel (HotelNo, Name, City)\nRoom (RoomNo, Hotel_No, Type, Price)\nBooking (HotelNo, GuestNo, FromDate, ToDate, RoomNo)\nGuest (GuestNo, Name, City)\nWrite SQL queries for the following: [4 × 2.5 =10 Marks]\ni) Get the details (print name and price) of all hotels in Bangalore.\nii) Get the average price of a room grouped by city.\niii) Find the name and city of the hotel which has the highest-priced room.\niv) Print the hotel names and room numbers of all hotels in Chennai which have rooms available at present.",
+      "co": "",
+      "bl": "",
+      "marks": "10",
+      "modules": []
+     }
+    ],
+    "pg": 2,
+    "y": 0.2
+   },
+   {
+    "number": 5,
+    "parts": [
+     {
+      "label": "",
+      "text": "Assume person X is planning to start an online shopping system to purchase some products and perform home delivery of the purchased products. He has identified some of the following entities, attributes and some information. Consider each customer will be assigned a unique id and each product on the shopping page will have a unique number. Similarly, for every order placed by the customer unique order number will be generated and after the successful payment of the bill, a payment id will be assigned. In this online shopping system, a customer places one or more order(s), the placed order includes one or more product(s), the placed order is associated with one payment and payment is associated with one order. Based on the above information:\ni) Design an ER diagram with appropriate cardinality ratios (7 marks).\nii) Map the designed ER model to a relational schema (8 marks).\nEntities & Attributes\nCustomer: customer_id [PK], name, email, address\nProduct: product_id [PK], name, price, description\nOrder: order_id [PK], order_date, customer_id [FK]\nPayment: payment_id [PK], payment_date, amount, order_id [FK]",
+      "co": "",
+      "bl": "",
+      "marks": "15",
+      "modules": [
+       "m2"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.44
+   },
+   {
+    "number": 6,
+    "parts": [
+     {
+      "label": "i",
+      "text": "Given a set of Functional Dependencies (FD), identify the redundant FD(s) and remove it with a suitable explanation.\nFD = {C->A, B->X, AX->Y, CB->Y} (3 Marks)",
+      "co": "",
+      "bl": "",
+      "marks": "",
+      "modules": [
+       "m3"
+      ]
+     },
+     {
+      "label": "ii",
+      "text": "Consider a relational schema R(A,B,C,D,E) and a set of functional dependencies\nFD = {A->BC, AC->E, B->D, E->AB}\na) Identify the minimal cover of R and explain the same (4 marks)\nb) Identify the candidate keys of R and explain the same (4 marks)\nc) Normalize the relation R to BCNF standard and give a suitable explanation (4 marks)",
+      "co": "",
+      "bl": "",
+      "marks": "15",
+      "modules": [
+       "m3"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 2,
+    "y": 0.69
+   },
+   {
+    "number": 7,
+    "parts": [
+     {
+      "label": "(i)",
+      "text": "Consider the given relation schema:\nStudent (Reg_no, stu_name, CGPA)\nCourse (ccode, cname, credits)\nCourse_student (Regno, stu_name, ccode)\nDraw the query evaluation plan tree using the heuristic optimization technique for the following query.\n\"List the courses with more than 4 credits which were taken by the student 'John' \". [8 Marks]",
+      "co": "",
+      "bl": "",
+      "marks": "15",
+      "modules": [
+       "m4"
+      ]
+     },
+     {
+      "label": "(ii)",
+      "text": "Consider the following Relation:\n| Cust_Id | Cust-name | Item | Price | Quantity |\n| 1111 | Jennifer | Deodorant | 1000 | 2 |\n| 8888 | Charles | Talcum Powder | 2200 | 5 |\n| 6666 | George | Talcum Powder | 2800 | 8 |\n| 5555 | Chris | Perfume | 3100 | 3 |\n| 7777 | Cheery | Deodorant | 3800 | 1 |\n| 3333 | Joseph | Perfume | 2200 | 1 |\n| 4444 | Pamila | Deodorant | 1500 | 7 |\nConstruct the B+tree with order=4 by inserting the above records in the same sequence. Delete the records which is having the values of as '3333' & '4444', and then, insert the record: (2222,'John', 'Talcum Powder',15000,3). [7 Marks].",
+      "co": "",
+      "bl": "",
+      "marks": "",
+      "modules": [
+       "m4"
+      ],
+      "and": true,
+      "pg": 3,
+      "y": 0.15
+     }
+    ],
+    "pg": 2,
+    "y": 0.9
+   },
+   {
+    "number": 8,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider the following two schedules (Schedule S1 and Schedule S2) given below. They are performing operations on the data items A, B, C, D and are submitted to the database system for execution in the given order. (Assume, S, and X are the shared and exclusive locks respectively):\nS1: T4:X(A), T3:S(C), T1:S(B), T2:X(B), T3:X(C), T2:X(A), T1:S(C), T4:S(B)\nS2: T1:X(A), T3:S(D), T3: S(A), T4:X(C), T2:S(B), T4:X(A), T2:X(C), T1:X(B), T4:X(D)\nAnswer the following questions by considering each schedule independently.\nFor both the schedule sequences S1 and S2.\ni. For each request shown in the schedule, mention whether the request is granted or blocked by the lock manager. [7 Marks]\nii. Show the waits-for graph and indicate whether there will be a deadlock or not at the end of each sequence. [8 Marks]",
+      "co": "",
+      "bl": "",
+      "marks": "15",
+      "modules": [
+       "m6"
+      ]
+     }
+    ],
+    "pg": 3,
+    "y": 0.4
+   }
+  ]
+ },
+ {
+  "id": "B2-24-25",
+  "exam": "Final Assessment Test - November 2025",
+  "course": "BCSE302L - Database Systems",
+  "slot": "B2+TB2",
+  "note": "Answer ALL Questions (10 X 10 = 100 Marks)",
+  "pages": 3,
+  "questions": [
+   {
+    "number": 1,
+    "parts": [
+     {
+      "label": "",
+      "text": "“The three schema architecture is considered the backbone of data abstraction in database systems”\nJustify this statement by explaining the three levels of database architecture and discuss how this model ensures logical and physical data independence with suitable examples.",
+      "co": "CO1",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m1"
+      ]
+     }
+    ],
+    "pg": 1,
+    "y": 0.64
+   },
+   {
+    "number": 2,
+    "parts": [
+     {
+      "label": "",
+      "text": "Design an ER diagram for a bank database system indicating entities, attributes, relationships and cardinalities. The bank maintains details of accounts, customers, loans, and payments. Each account has an account number and balance. Accounts are of two types: Savings Account and Current Account, which are specializations of the Account entity. Each customer has a unique customer ID, name, and address. A customer may hold multiple accounts, and an account may be jointly owned by more than one customer. Loans are identified by a loan number, amount, and type. A loan can have multiple payments, and each payment (with payment ID, amount, and date) is associated with exactly one loan.",
+      "co": "CO1",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m2"
+      ]
+     }
+    ],
+    "pg": 1,
+    "y": 0.73
+   },
+   {
+    "number": 3,
+    "parts": [
+     {
+      "label": "",
+      "text": "Elucidate the systematic steps involved in translating an ER diagram into its equivalent relational schema, supplementing your explanation for the question 2.",
+      "co": "CO1",
+      "bl": "BL3",
+      "marks": "",
+      "modules": [
+       "m2"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.03
+   },
+   {
+    "number": 4,
+    "parts": [
+     {
+      "label": "",
+      "text": "Given a relation STUDENT_COURSE (StudentID, StudentName, CourseID, CourseName, InstructorID, InstructorName, InstructorDept).\nNormalize this relation step by step up to Third Normal Form with proper explanation clearly showing the functional dependencies at each stage and explaining the decomposition process. Illustrate the final set of relations obtained in 3NF. Justify your answer.",
+      "co": "CO2",
+      "bl": "BL5",
+      "marks": "",
+      "modules": [
+       "m3"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.09
+   },
+   {
+    "number": 5,
+    "parts": [
+     {
+      "label": "",
+      "text": "Examine multilevel indexing techniques employed in database systems, and illustrate each with appropriate real-world examples to demonstrate their practical application.",
+      "co": "CO3",
+      "bl": "BL3",
+      "marks": "",
+      "modules": [
+       "m4"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.23
+   },
+   {
+    "number": 6,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider the following database schema for a library:\n• BOOK(BookID, Title, PublisherID, Year)\n• PUBLISHER(PublisherID, PublisherName, Address)\n• MEMBER(MemberID, MemberName, MemberType)\n• BORROW(BookID, MemberID, BorrowDate, ReturnDate)\nUsing the above schema, express the following queries in Relational Algebra:\ni. Retrieve the names of members who have borrowed the book titled \"Database Systems\".\nii. List all book titles published by the publisher named \"Pearson\".\niii. Find the names of members who have borrowed at least one book but have not yet returned it.\niv. For each publisher, display the publisher name and the total number of books published.\nv. Retrieve the titles of books that have never been borrowed by any member.",
+      "co": "CO3",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m4"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.3
+   },
+   {
+    "number": 7,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider the following schedules of transactions in a database system:\ni. S1 = r1(A); r2(A); w1(A); w2(A)\nii. S2 = r1(X); w2(Y); w1(Y); r2(X)\niii. S3 = r1(A); r2(B); w1(B); w2(A); r3(A); w3(B)\nTransactions:\n(T1: r(A); w(A); r(B); w(B))\n(T2: r(B); w(B); r(A); w(A))\na) For each schedule, determine whether it is conflict-serializable.\nb) For the schedules that are conflict-serializable, draw the precedence (serializability) graph and provide an equivalent serial schedule.\nc) For the transactions T1 and T2, construct a conflict-serializable schedule and explain the steps you used to ensure serializability.\nd) Explain the concept of conflict-serializability and how precedence graphs are used to verify it.",
+      "co": "CO4",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m5"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.59
+   },
+   {
+    "number": 8,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Illustrate the various states involved in database transaction.",
+      "co": "CO4",
+      "bl": "BL3",
+      "marks": "5",
+      "modules": [
+       "m5"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Discuss the Shadow Paging technique in database management systems, elaborating on its working and significance in detail.",
+      "co": "CO4",
+      "bl": "BL3",
+      "marks": "5",
+      "modules": [
+       "m5"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 3,
+    "y": 0.06
+   },
+   {
+    "number": 9,
+    "parts": [
+     {
+      "label": "a",
+      "text": "A database system uses the Two-Phase Locking (2PL) protocol to manage concurrent transactions. Consider the following transactions:\n• T1: Read(A); Write(A); Read(B); Write(B)\n• T2: Read(B); Write(B); Read(C); Write(C)\n• T3: Read(C); Write(C); Read(A); Write(A)\ni. Draw a possible schedule of these transactions under 2PL.\nii. Show where deadlock can occur, if any.\niii. Suggest how deadlock can be avoided or resolved in this case.",
+      "co": "CO4",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m6"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "A database system implements multi-granularity locking (MGL) with lock modes: IS, IX, S, X, and uses a lock hierarchy (Database → Table → Page → Tuple).\nTwo transactions are running concurrently:\n• T1: Needs to update a set of tuples in Table A.\n• T2: Needs to scan Table A in shared mode to read all tuples.\ni. Show the sequence of lock requests for both T1 and T2 under multi-granularity locking.\nii. Illustrate how intention locks help avoid deadlocks in this situation.\niii. Explain why MGL improves concurrency compared to simple table-level locking.",
+      "co": "CO4",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m6"
+      ]
+     }
+    ],
+    "pg": 3,
+    "y": 0.14
+   },
+   {
+    "number": 10,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Explain the CAP Theorem in the context of NoSQL databases. How does it influence the design trade-offs in distributed systems?",
+      "co": "CO5",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m7"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Differentiate the major types of NoSQL databases in terms of their data models, usage scenarios, and advantages, illustrating how each type serves specific application needs.",
+      "co": "CO5",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m7"
+      ]
+     }
+    ],
+    "pg": 3,
+    "y": 0.57
+   }
+  ]
+ },
+ {
+  "id": "B2-25-26",
+  "exam": "Final Assessment Test - November 2025",
+  "course": "BCSE302L - Database Systems",
+  "slot": "B2+TB2",
+  "note": "Answer ALL Questions (10 X 10 = 100 Marks)",
+  "pages": 3,
+  "questions": [
+   {
+    "number": 1,
+    "parts": [
+     {
+      "label": "",
+      "text": "“The three schema architecture is considered the backbone of data abstraction in database systems”\nJustify this statement by explaining the three levels of database architecture and discuss how this model ensures logical and physical data independence with suitable examples.",
+      "co": "CO1",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m1"
+      ]
+     }
+    ],
+    "pg": 1,
+    "y": 0.64
+   },
+   {
+    "number": 2,
+    "parts": [
+     {
+      "label": "",
+      "text": "Design an ER diagram for a bank database system indicating entities, attributes, relationships and cardinalities. The bank maintains details of accounts, customers, loans, and payments. Each account has an account number and balance. Accounts are of two types: Savings Account and Current Account, which are specializations of the Account entity. Each customer has a unique customer ID, name, and address. A customer may hold multiple accounts, and an account may be jointly owned by more than one customer. Loans are identified by a loan number, amount, and type. A loan can have multiple payments, and each payment (with payment ID, amount, and date) is associated with exactly one loan.",
+      "co": "CO1",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m2"
+      ]
+     }
+    ],
+    "pg": 1,
+    "y": 0.73
+   },
+   {
+    "number": 3,
+    "parts": [
+     {
+      "label": "",
+      "text": "Elucidate the systematic steps involved in translating an ER diagram into its equivalent relational schema, supplementing your explanation for the question 2.",
+      "co": "CO1",
+      "bl": "BL3",
+      "marks": "",
+      "modules": [
+       "m2"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.03
+   },
+   {
+    "number": 4,
+    "parts": [
+     {
+      "label": "",
+      "text": "Given a relation STUDENT_COURSE (StudentID, StudentName, CourseID, CourseName, InstructorID, InstructorName, InstructorDept).\nNormalize this relation step by step up to Third Normal Form with proper explanation clearly showing the functional dependencies at each stage and explaining the decomposition process. Illustrate the final set of relations obtained in 3NF. Justify your answer.",
+      "co": "CO2",
+      "bl": "BL5",
+      "marks": "",
+      "modules": [
+       "m3"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.09
+   },
+   {
+    "number": 5,
+    "parts": [
+     {
+      "label": "",
+      "text": "Examine multilevel indexing techniques employed in database systems, and illustrate each with appropriate real-world examples to demonstrate their practical application.",
+      "co": "CO3",
+      "bl": "BL3",
+      "marks": "",
+      "modules": [
+       "m4"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.23
+   },
+   {
+    "number": 6,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider the following database schema for a library:\n• BOOK(BookID, Title, PublisherID, Year)\n• PUBLISHER(PublisherID, PublisherName, Address)\n• MEMBER(MemberID, MemberName, MemberType)\n• BORROW(BookID, MemberID, BorrowDate, ReturnDate)\nUsing the above schema, express the following queries in Relational Algebra:\ni. Retrieve the names of members who have borrowed the book titled \"Database Systems\".\nii. List all book titles published by the publisher named \"Pearson\".\niii. Find the names of members who have borrowed at least one book but have not yet returned it.\niv. For each publisher, display the publisher name and the total number of books published.\nv. Retrieve the titles of books that have never been borrowed by any member.",
+      "co": "CO3",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m4"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.3
+   },
+   {
+    "number": 7,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider the following schedules of transactions in a database system:\ni. S1 = r1(A); r2(A); w1(A); w2(A)\nii. S2 = r1(X); w2(Y); w1(Y); r2(X)\niii. S3 = r1(A); r2(B); w1(B); w2(A); r3(A); w3(B)\nTransactions:\n(T1: r(A); w(A); r(B); w(B))\n(T2: r(B); w(B); r(A); w(A))\na) For each schedule, determine whether it is conflict-serializable.\nb) For the schedules that are conflict-serializable, draw the precedence (serializability) graph and provide an equivalent serial schedule.\nc) For the transactions T1 and T2, construct a conflict-serializable schedule and explain the steps you used to ensure serializability.\nd) Explain the concept of conflict-serializability and how precedence graphs are used to verify it.",
+      "co": "CO4",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m5"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.59
+   },
+   {
+    "number": 8,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Illustrate the various states involved in database transaction.",
+      "co": "CO4",
+      "bl": "BL3",
+      "marks": "5",
+      "modules": [
+       "m5"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Discuss the Shadow Paging technique in database management systems, elaborating on its working and significance in detail.",
+      "co": "CO4",
+      "bl": "BL3",
+      "marks": "5",
+      "modules": [
+       "m5"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 3,
+    "y": 0.06
+   },
+   {
+    "number": 9,
+    "parts": [
+     {
+      "label": "a",
+      "text": "A database system uses the Two-Phase Locking (2PL) protocol to manage concurrent transactions. Consider the following transactions:\n• T1: Read(A); Write(A); Read(B); Write(B)\n• T2: Read(B); Write(B); Read(C); Write(C)\n• T3: Read(C); Write(C); Read(A); Write(A)\ni. Draw a possible schedule of these transactions under 2PL.\nii. Show where deadlock can occur, if any.\niii. Suggest how deadlock can be avoided or resolved in this case.",
+      "co": "CO4",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m6"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "A database system implements multi-granularity locking (MGL) with lock modes: IS, IX, S, X, and uses a lock hierarchy (Database → Table → Page → Tuple).\nTwo transactions are running concurrently:\n• T1: Needs to update a set of tuples in Table A.\n• T2: Needs to scan Table A in shared mode to read all tuples.\ni. Show the sequence of lock requests for both T1 and T2 under multi-granularity locking.\nii. Illustrate how intention locks help avoid deadlocks in this situation.\niii. Explain why MGL improves concurrency compared to simple table-level locking.",
+      "co": "CO4",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m6"
+      ]
+     }
+    ],
+    "pg": 3,
+    "y": 0.14
+   },
+   {
+    "number": 10,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Explain the CAP Theorem in the context of NoSQL databases. How does it influence the design trade-offs in distributed systems?",
+      "co": "CO5",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m7"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Differentiate the major types of NoSQL databases in terms of their data models, usage scenarios, and advantages, illustrating how each type serves specific application needs.",
+      "co": "CO5",
+      "bl": "BL2",
+      "marks": "",
+      "modules": [
+       "m7"
+      ]
+     }
+    ],
+    "pg": 3,
+    "y": 0.57
+   }
+  ]
+ },
+ {
+  "id": "E1-25-26",
+  "exam": "Final Assessment Test(FAT) - NOV/DEC 2025",
+  "course": "BCSE302L - Database Systems",
+  "slot": "E1+TE1",
+  "note": "Answer all Questions (10 × 10 Marks)",
+  "pages": 4,
+  "questions": [
+   {
+    "number": 1,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Assume that you are responsible for designing the database system of \"Z-Bank\" banking application that manages account balances, transaction histories, and transaction processing efficiently. Analyze and describe the functionality of each layer in the three-schema architecture for this system with a neat diagram. Also, discuss how this architecture ensures data independence, security, and efficient management. (7 marks)",
+      "co": "",
+      "bl": "7",
+      "marks": "CO1/K2",
+      "modules": [
+       "m1"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "In the \"Z-Bank\" database system, multiple users may perform transactions such as deposits and withdrawals simultaneously. Identify the components in the DBMS architecture that are responsible for maintaining transaction consistency and restoring data after failures. How do these components ensure data reliability and smooth transaction processing in a multi-user banking environment? Justify your answer. (3 marks)",
+      "co": "",
+      "bl": "3",
+      "marks": "CO1/K2",
+      "modules": [
+       "m1"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 1,
+    "y": 0.38
+   },
+   {
+    "number": 2,
+    "parts": [
+     {
+      "label": "",
+      "text": "Design an Enhanced Entity-Relationship (EER) diagram for the following university academic management system. Your diagram should clearly specify entities, attributes (including keys), relationships, participation constraints, cardinalities, and any specialization or aggregation used. State any assumptions you make. The university manages its academic programs, courses, faculty, students, and course offerings.\n• The university is organized into several Faculties (e.g., Engineering, Science, Arts). Each faculty has a FacultyID, name, and dean.\n• Each faculty is divided into multiple Schools (e.g., School of Computer Science, School of Physics). Each school has a SchoolID, name, and head.\n• Each School offers several Programs (e.g., B.Tech CSE, M.Sc Physics). Each program has a ProgramID, name, duration, and degree type.\n• Each Program consists of multiple Courses. Each course has a CourseID, title, credits, and semester offered.\n• Lecturers teach courses. Each lecturer has a LecturerID, name, email, and specialization. A lecturer can teach multiple courses, and a course can be taught by multiple lecturers (possibly in different semesters).\n• Students enroll in one program but can register for multiple courses each semester. Each student has a StudentID, name, email, year of study, and program enrolled.\n• For each Course Offering (a course taught in a specific semester), record the CourseID, Semester, Year, LecturerID(s), and number of students enrolled.\n• Students receive grades for each course offering. Grades are recorded as A/B/C/D/F.\n• Some courses are electives and can be chosen by students from any program, while others are core and mandatory for specific programs.\n• There are specializations for students: Undergraduate and Postgraduate. Postgraduate students may have a thesis title and a supervisor (who is a lecturer).\n• The university tracks prerequisite relationships between courses (e.g., Course A is a prerequisite for Course B).",
+      "co": "",
+      "bl": "10",
+      "marks": "CO1/K2",
+      "modules": [
+       "m2"
+      ]
+     }
+    ],
+    "pg": 1,
+    "y": 0.5
+   },
+   {
+    "number": 3,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Assume that XYZ university maintains a database to manage students' course registrations with the following attributes: StudentID (S), StudentName (SN) ,DeptID (D),DeptName (DN). CourseID (C) ,CourseName (CN) ,Credits (CR),Semester (SM) ,Year (Y) ,CourseInstructor,(CI)DepartmentDean(DD)\nConsider the following assumptions are made on students_course_registrations database\n• Each student has a unique name and belongs to a single department\n• Each department has a unique name and a dean\n• Each course has a unique name and credit value\n• Each student-course combination determines the semester and year of enrollment\n• Each course in a semester is taught by exactly one instructor\n• For each student-course combination, the earned marks are uniquely determined\na. Derive the set of functional dependencies (FDs) based on the assumptions described above and compute the minimal cover (canonical cover) using step by step process.(7 marks)",
+      "co": "",
+      "bl": "7",
+      "marks": "CO2/K3",
+      "modules": [
+       "m3"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Consider the relation: R(A, B, C, D, E, F, G) with the following functional dependencies:\nF = { A → BC, B → D, CD → E, E → F, F → G }.\nUsing Armstrong's inference rules derive the following functional dependency : A → G. Show each step of the derivation and explicitly state which inference rule is applied at each step.( 3 marks)",
+      "co": "",
+      "bl": "3",
+      "marks": "CO2/K3",
+      "modules": [
+       "m3"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 2,
+    "y": 0.11
+   },
+   {
+    "number": 4,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider the following Sample data of the relation \"Supply_Order\" for a farm supply management database at AgriGrow Pvt. Ltd.\nSample Data : Suppy_Order\n| SO_ID | Farm_ID | Sdate | Product_ID | Qty_Supplied | Total_Price |\n| 101 | F01 | 6-10-2025 | P201, P202 | 4,3 | 10000 |\n| 102 | F02 | 6-10-2025 | P201, P203, P205 | 4,2,4 | 15000 |\n| 103 | F03 | 4-11-2024 | P203, P202 | 3,2 | 13000 |\n| 104 | F04 | 8-10-2024 | P201, P205 | 6,4 | 11000 |\n| 105 | F05 | 7-10-2025 | P207 | 1 | 5000 |\ni. Illustrate examples of update, insertion, and deletion anomalies caused by data redundancy for the given \"Supply_Order\" table.(3 marks)\nii. Normalize the relation \"Supply_Order\" to Third Normal Form showing the step by step process with proper justification. Clearly list candidate keys, functional dependencies, partial and transitive dependencies, and justify each decomposition step. State any assumptions you make.(7 marks)",
+      "co": "",
+      "bl": "10",
+      "marks": "CO2/K3",
+      "modules": [
+       "m3"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.37
+   },
+   {
+    "number": 5,
+    "parts": [
+     {
+      "label": "",
+      "text": "An university is implementing a B+ tree index of order 4 on its Student_Records table to efficiently manage student information. A batch of new students has joined the university, and their names, in order of arrival, are Ritan, Harini, Vinu, Noushad, Harish, Vincent, Kapil, Rohit, Aaron, Ishan, Yash, Robert, Salman, and Sana\nYou are required to insert these names into the B+ tree one by one, maintaining lexicographic order within the nodes.\ni. Show the structure of the tree after each insertion, clearly indicating any leaf node splits and promotions to parent or root nodes.(7 marks)\nii. Delete the students names – \"Sana\", \"Vincent\", \"Rohit\" from the constructed B+ tree, and Show the updated tree after each deletion. Indicate any merges or redistributions required to maintain the properties of the B+ tree. (3 marks)",
+      "co": "",
+      "bl": "10",
+      "marks": "CO3/K4",
+      "modules": [
+       "m4"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.65
+   },
+   {
+    "number": 6,
+    "parts": [
+     {
+      "label": "a",
+      "text": "A bank maintains a file of CUSTOMER ACCOUNTS with \"Account_No\" values as the hash key. The file is organized into seven buckets (numbered B0–B6). Each bucket corresponds to one disk block and can hold two customer accounts records. The following Account_No values are to be inserted in the given order:1025, 2378, 3541, 4680, 5297, 6432, 7189, 2987, 4756, 6890, 7543 using the hash function h (K)=K mod 7. Insert the records into the file using the given hash function. Show bucket assignments clearly, including any overflow blocks created. (3 marks)",
+      "co": "",
+      "bl": "3",
+      "marks": "CO3/K5",
+      "modules": [
+       "m4"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Using the above Account_No values(used in 6.a) suppose the bank stores them in a hash table using quadratic probing, with 7 slots (B0–B6), and one record per slot\ni. Draw the final hash table after all insertions using quadratic probing and show the \"Account_No\" values that are not mapped to the hash table. (3 marks)\nii. As a computer architect, propose a solution and modified hash function to map all the hash keys in the above scenario using quadratic probing. Show the hash table after all insertions using modified hash function for quadratic probing. (4 marks)",
+      "co": "",
+      "bl": "7",
+      "marks": "CO3/K5",
+      "modules": [
+       "m4"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 2,
+    "y": 0.8
+   },
+   {
+    "number": 7,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Consider the Precedence graph given below. Is the corresponding schedule conflict serializable? If yes, list the valid serial schedule(s) and explain your answer with proper justification. (4 marks)\n{{fig:E1-25-26-q7}}",
+      "co": "",
+      "bl": "4",
+      "marks": "CO4/K4",
+      "modules": [
+       "m5"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Consider a bank database with a Customer_Account A having an initial balance of ₹1000. Four transactions, T1, T2, T3, and T4, execute as shown in the following timeline:\n| Time | T1 | T2 | T3 | T4 |\n| t1 | Read(A) | | | |\n| t2 | | Read(A) | | |\n| t3 | A=A - 200 | | | |\n| t4 | Write(A) | | | |\n| t5 | Commit | | | |\n| t6 | | | Read(A) | |\n| t7 | | A=A + 500 | | |\n| t8 | | Write(A) | | |\n| t9 | | | A=A - 100 | |\n| t10 | | | Write(A) | |\n| t11 | | | Commit | |\n| t12 | | | | Read(A) |\n| t13 | | | | A=A + 300 |\n| t14 | | | | Write(A) |\n| t15 | | | | System Crash |\ni. List the log entries for all transactions in the given timeline using \"NO-UNDO/REDO\" and \"UNDO/REDO\" protocols. Identify which transactions require redo or undo after a system crash at t15 in both protocols. (4 marks)\nii. Determine the final value of account A after recovery for both protocols. (2 marks)",
+      "co": "",
+      "bl": "6",
+      "marks": "CO4/K4",
+      "modules": [
+       "m5"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 3,
+    "y": 0.05
+   },
+   {
+    "number": 8,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Transaction T1 is holding data items X and Y. Transaction T2 is requesting data item X, and transaction T3 holds Z and requests Y. Draw a Wait-For Graph and check whether a deadlock occurs. Justify your answer.(4 Marks)",
+      "co": "",
+      "bl": "4",
+      "marks": "CO4/K4",
+      "modules": [
+       "m6"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Include necessary locks (Exclusive/Shared) and unlocks in the following transactions to avoid rollback and deadlock. Identify growing, shrinking, and locking point for each transaction as per 2PL protocol. Also mention the variant of 2PL.(6 Marks)\nSchedule:\n| Time | T1 | T2 |\n| t1 | R(X) | — |\n| t2 | X=X + 200 | — |\n| t3 | W(X) | R(Z) |\n| t4 | R(Y) | R(X) |\n| t5 | Y=Y - 100 | Z=Z - 150 |\n| t6 | W(Y) | W(Z) |\n| t7 | — | Display(X + Z) |",
+      "co": "",
+      "bl": "6",
+      "marks": "CO4/K4",
+      "modules": [
+       "m6"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 3,
+    "y": 0.64
+   },
+   {
+    "number": 9,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Two transactions T₁ and T₂ execute under the Basic Timestamp-Ordering Protocol.\nAssume:\nTS(T₁)= 10\nTS(T₂)= 25\nInitial values : ReadTS(X)=0, WriteTS(X)=0, ReadTS(Y)=0, WriteTS(Y)=0.\nThe following schedule occurs,\nSchedule:\n| Time | T1 | T2 |\n| t1 | R(X) | — |\n| t2 | — | R(X) |\n| t3 | W(X) | — |\n| t4 | — | W(X) |\n| t5 | — | R(Y) |\n| t6 | W(Y) | — |\n| t7 | Commit | Commit |\nUsing the timestamp rules, Show how ReadTS(X) and WriteTS(X) change after each operation. Determine whether any operation is rejected or causes a rollback.\nDecide whether the final schedule is conflict-serializable and identify the equivalent serial order.(4 marks)",
+      "co": "",
+      "bl": "4",
+      "marks": "CO4/K4",
+      "modules": [
+       "m6"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Two transactions T₁ and T₂ execute under the Modified Timestamp-Ordering Protocol.\nAssume:\nTS(T₁)= 15,\nTS(T₂)= 30\nInitially: ReadTS(A)=0, WriteTS(A)=0, ReadTS(B)=0, WriteTS(B)=0\nThe following schedule occurs,\nSchedule:\n| Time | T1 | T2 |\n| t1 | R(A) | — |\n| t2 | — | R(A) |\n| t3 | W(A) | — |\n| t4 | — | W(A) |\n| t5 | — | R(B) |\n| t6 | W(B) | — |\n| t7 | — | W(B) |\n| t8 | Commit | Commit |\nShow the status of each read/write (executed or ignored). Update ReadTS and WriteTS values for A and B after every operation. Explain how Thomas's Write Rule affects whether T₁ or T₂ must be rolled back.(6 Marks)",
+      "co": "",
+      "bl": "6",
+      "marks": "CO4/K4",
+      "modules": [
+       "m6"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 4,
+    "y": 0.05
+   },
+   {
+    "number": 10,
+    "parts": [
+     {
+      "label": "a",
+      "text": "List and briefly describe the four main types of NoSQL databases: key-value stores, document stores, column-family stores, and graph databases. Highlight one key technical feature of each type. (5 Marks)",
+      "co": "",
+      "bl": "5",
+      "marks": "CO5/K2",
+      "modules": [
+       "m7"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Compare any two NoSQL database types in terms of scalability, data modeling flexibility, and query capabilities. Use examples to support your comparison. (5 Marks)",
+      "co": "",
+      "bl": "5",
+      "marks": "CO5/K2",
+      "modules": [
+       "m7"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 4,
+    "y": 0.74
+   }
+  ]
+ },
+ {
+  "id": "F2-23-24",
+  "exam": "Final Assessment Test (FAT) - July/August 2023",
+  "course": "DATABASE SYSTEMS (BCSE302L)",
+  "slot": "F2+TF2",
+  "note": "Section A (7 X 10 Marks) Answer All questions; Section B (2 X 15 Marks) Answer All questions",
+  "pages": 3,
+  "questions": [
+   {
+    "number": 1,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Assume that an online retail store called “HappyShoppy” has experienced rapid growth in its customer base and product inventory.\nIdentify and elaborate the kind of DBMS architecture needed to manage their operations efficiently with a neat diagram. (8 Marks)",
+      "co": "",
+      "bl": "8",
+      "marks": "",
+      "modules": [
+       "m1"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Mention the benefits of chosen architecture (2 Marks)",
+      "co": "",
+      "bl": "2",
+      "marks": "",
+      "modules": [
+       "m1"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 1,
+    "y": 0.3
+   },
+   {
+    "number": 2,
+    "parts": [
+     {
+      "label": "a",
+      "text": "{{fig:F2-23-24-q2}}\nMap the above E-R model to appropriate relation schema.(5 Marks)",
+      "co": "",
+      "bl": "5",
+      "marks": "",
+      "modules": [
+       "m2"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Determine the primary key, foreign key, and any other appropriate constraints in the mapped schema and also describe the purpose of each constraints.(5 Marks)",
+      "co": "",
+      "bl": "5",
+      "marks": "",
+      "modules": [
+       "m2"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 1,
+    "y": 0.43
+   },
+   {
+    "number": 3,
+    "parts": [
+     {
+      "label": "",
+      "text": "Assume that you are the database designer at TeachEasy and you need to maintain the database for easier access and retrieval of records at any time. The database contains the following:\n| Book ID | Published Date | Tutor ID | Title | Room | PHONE NUMBER | Block Numbers |\n| B1 | 23.02.23 | Tut1 | PYTHON | AB3310 | 9940497934, 9940497938 | AB3 |\n| B2 | 18.11.23 | Tut3 | SQL | AB1331 | 9876123456 | AB1 |\n| B3 | 23.02.23 | Tut1 | MATLAB | AB2310 | 9940497934, 9940497938 | AB2 |\n| B5 | 05.02.23 | Tut3 | JAVA | AB2332 | 9876123459 | AB2 |\n| B4 | 04.07.23 | Tut5 | AZURE | DB321 | 9876543210 | DB |\nNormalize the given table up to the third level normal form with proper justifications for violations in each form.",
+      "co": "",
+      "bl": "10",
+      "marks": "",
+      "modules": [
+       "m3"
+      ]
+     }
+    ],
+    "pg": 1,
+    "y": 0.88
+   },
+   {
+    "number": 4,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Banking System online application is used to store, manipulate and retrieve the customer's account details. Identity and describe the recovery techniques that can be applied for critical data restoration in case of some transaction failure or data corruptions. (4 Marks)",
+      "co": "",
+      "bl": "4",
+      "marks": "",
+      "modules": [
+       "m5"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Write the log records created during Deferred database modification and Immediate database modification for the following schedule. Assume that the initial values of A=1100, B=1200 and C=1000. (6 Marks)\nT0: Read(A)\nA:=A-550\nWrite(A)\nRead(B)\nB:=B+550\nWrite (B)\nT1: Read(C)\nC:=C-300\nWrite(C)",
+      "co": "",
+      "bl": "6",
+      "marks": "",
+      "modules": [
+       "m5"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 2,
+    "y": 0.33
+   },
+   {
+    "number": 5,
+    "parts": [
+     {
+      "label": "a",
+      "text": "Consider the Grade Monitoring System that maintains the grade of the students in an institute that enables the faculty to post the grade and students to view their grade. A faculty posts the grade of the student A from the node XYZ and the student A access his/her grade from the node PQR. Illustrate the upholding CAP using the given scenario. (8 Marks)",
+      "co": "",
+      "bl": "8",
+      "marks": "",
+      "modules": [
+       "m7"
+      ]
+     },
+     {
+      "label": "b",
+      "text": "Comment on the statement : \"Achieving CAP is not possible at all times in a distributed system\" (2 Marks)",
+      "co": "",
+      "bl": "2",
+      "marks": "",
+      "modules": [
+       "m7"
+      ],
+      "and": true
+     }
+    ],
+    "pg": 2,
+    "y": 0.66
+   },
+   {
+    "number": 6,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider the following student table:\n| Reg.No. | Name | Physics Marks | Chemistry Marks | Maths Marks | Age | Department | Residential City |\n| 1001 | Harish | 90 | 80 | 98 | 19 | SENSE | Chennai |\n| 1002 | Ram | 50 | 95 | 90 | 20 | SENSE | Bangalore |\n| 1003 | Suresh | 80 | 85 | 75 | 19 | SENSE | Mumbai |\n| 1004 | Dhamu | 95 | 95 | 55 | 20 | SCOPE | Kolkata |\n| 1005 | Prathik | 85 | 70 | 85 | 19 | SENSE | Delhi |\n| 1006 | Gokul | 65 | 52 | 40 | 18 | SCOPE | Chennai |\nWrite SQL query for the following.\na. Add a new column \"Average\" in the above table and find the average of all the students (2 Marks)\nb. Display the name of all students whose residential city is either Chennai or Bangalore (2 Marks)\nc. List the name of all students in Upper Case those who are in the age 19 and studying in SENSE department (2 Marks)\nd. Display the minimum and maximum age of the students (2 Marks)\ne. Find the student name and department whose average mark above 80 department wise (2 Marks)",
+      "co": "",
+      "bl": "10",
+      "marks": "",
+      "modules": [
+       "m4"
+      ]
+     }
+    ],
+    "pg": 2,
+    "y": 0.69
+   },
+   {
+    "number": 7,
+    "parts": [
+     {
+      "label": "a",
+      "text": "The management team wanted to check whether a particular faculty in the university is employed or not. Write a PL/SQL function to assist the management team so that a message is displayed as \"Employed\" Otherwise \"Not Employed\". (5 Marks)",
+      "co": "",
+      "bl": "5",
+      "marks": "",
+      "modules": []
+     },
+     {
+      "label": "b",
+      "text": "Create an explicit cursor named university_cur and fetch the details of all students in the student table whose department is SENSE. Also, Illustrate the ROWCOUNT using implicit cursor. (5 Marks)\nNote: Assume the required tables with data are already existing in the database.",
+      "co": "",
+      "bl": "5",
+      "marks": "",
+      "modules": [],
+      "and": true
+     }
+    ],
+    "pg": 3,
+    "y": 0.27
+   },
+   {
+    "number": 8,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider the following relations of a university database.\nFaculty (EmpId, Name, Phno, School, DateOfJoining)\nStudent (RegNo, Name, Phno, School)\nCourse (CourseCode, CourseName, Credits)\nCourseAllocation (ClassNumber, AEmpId, ACourseCode,Venue, MaxStrength, Slot)\nStudReg (RegNo, ClassNumber)\na. Write a relational algebra query and depict a query tree to find Name and Phone numbers of Faculty members who have joined after 01-01-2023 and handling DBMS course. (5 Marks)\nb. Convert the constructed canonical tree into optimized tree using Heuristic technique. (5 Marks)\nc. The Keys 12,18,13,2,3,23,5 and 15 are inserted into an empty hash table of length 8 using open addressing with hash function h(k)=k mod 8. Show the resultant hash table of each key entries (5 Marks)",
+      "co": "",
+      "bl": "15",
+      "marks": "",
+      "modules": [
+       "m4"
+      ]
+     }
+    ],
+    "pg": 3,
+    "y": 0.5
+   },
+   {
+    "number": 9,
+    "parts": [
+     {
+      "label": "",
+      "text": "Consider the Concurrent Transaction and initial values of A, B and C are 200, 200, and 380 respectively\n| Time | Transaction Tx | Transaction Ty |\n| T1 | Read (A) | Read(A) |\n| T2 | Read (B) | Read (B) |\n| T3 | Write (B=A+100) | |\n| T4 | Write (C=C+B*2) | Write (B=A+100) |\n| T5 | Read (C) | Write (C=C+B*2) |\n| T6 | Read(A) | Read (A) |\n| T7 | Read(B) | Read(B) |\n| T8 | | Read (C) |\na. Identify and elaborate the issues on the concurrent transaction as given in the above table (4 Marks)\nb. Illustrate the solution to overcome the problems using lock based protocol (basic, Strict and Rigorous) with proper justification (11 Marks)",
+      "co": "",
+      "bl": "15",
+      "marks": "",
+      "modules": [
+       "m6"
+      ]
+     }
+    ],
+    "pg": 3,
+    "y": 0.72
+   }
+  ]
+ }
+]

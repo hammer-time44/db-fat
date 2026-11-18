@@ -1,0 +1,407 @@
+[
+ {
+  "id": "m1",
+  "topics": [
+   {
+    "topic": "Three-Schema Architecture",
+    "refs": [
+     "A1-24-25-Q1",
+     "B2-24-25-Q1",
+     "B2-25-26-Q1",
+     "E1-25-26-Q1(a)"
+    ]
+   },
+   {
+    "topic": "Logical & Physical Data Independence",
+    "refs": [
+     "A1-23-24-Q1(b)",
+     "A2-24-25-Q1(ii)"
+    ]
+   },
+   {
+    "topic": "Centralized & Client/Server Architecture",
+    "refs": [
+     "B1-25-26-Q1",
+     "E1-25-26-Q1(b)",
+     "F2-23-24-Q1",
+     "B2-22-23-Q1"
+    ]
+   },
+   {
+    "topic": "Database Schema vs Database State",
+    "refs": [
+     "A2-24-25-Q1(i)"
+    ]
+   },
+   {
+    "topic": "Data Abstraction and Data Models",
+    "refs": [
+     "A1-23-24-Q1(a)"
+    ]
+   },
+   {
+    "topic": "Database Administrator and Actors",
+    "refs": []
+   }
+  ]
+ },
+ {
+  "id": "m2",
+  "topics": [
+   {
+    "topic": "ER Diagram Design",
+    "refs": [
+     "A1-23-24-Q2",
+     "A1-24-25-Q2",
+     "B1-25-26-Q2",
+     "B2-24-25-Q2",
+     "B2-25-26-Q2",
+     "B2-22-23-Q5"
+    ]
+   },
+   {
+    "topic": "ER to Relational Schema Mapping",
+    "refs": [
+     "A2-24-25-Q2(b)",
+     "B2-24-25-Q3",
+     "B2-25-26-Q3",
+     "F2-23-24-Q2(a)"
+    ]
+   },
+   {
+    "topic": "Cardinality & Participation Constraints",
+    "refs": []
+   },
+   {
+    "topic": "Entity, Attributes & Relationships",
+    "refs": []
+   },
+   {
+    "topic": "Generalization & Specialization",
+    "refs": [
+     "A1-24-25-Q3",
+     "A2-24-25-Q2(a)",
+     "E1-25-26-Q2"
+    ]
+   },
+   {
+    "topic": "Candidate Keys, Primary Keys & Foreign Keys",
+    "refs": [
+     "F2-23-24-Q2(b)"
+    ]
+   },
+   {
+    "topic": "Integrity Constraints and Handling of Nulls",
+    "refs": []
+   }
+  ]
+ },
+ {
+  "id": "m3",
+  "topics": [
+   {
+    "topic": "Functional Dependencies",
+    "refs": []
+   },
+   {
+    "topic": "Normalization up to 3NF",
+    "refs": [
+     "A1-23-24-Q3(a)",
+     "A1-24-25-Q5",
+     "B2-24-25-Q4",
+     "B2-25-26-Q4",
+     "E1-25-26-Q4",
+     "F2-23-24-Q3"
+    ]
+   },
+   {
+    "topic": "Candidate Key Identification",
+    "refs": []
+   },
+   {
+    "topic": "Minimal / Canonical Cover",
+    "refs": [
+     "A2-24-25-Q4(i)",
+     "B2-22-23-Q6(i)",
+     "E1-25-26-Q3(a)"
+    ]
+   },
+   {
+    "topic": "Armstrong's Axioms",
+    "refs": [
+     "A1-23-24-Q3(b)",
+     "B1-25-26-Q3",
+     "E1-25-26-Q3(b)"
+    ]
+   },
+   {
+    "topic": "BCNF",
+    "refs": [
+     "A2-24-25-Q3",
+     "B2-22-23-Q6(ii)"
+    ]
+   },
+   {
+    "topic": "Dependency Preservation",
+    "refs": [
+     "A1-23-24-Q4",
+     "A1-24-25-Q4",
+     "A2-24-25-Q4(ii)"
+    ]
+   },
+   {
+    "topic": "4NF – Multivalued Dependency",
+    "refs": []
+   },
+   {
+    "topic": "5NF – Join Dependency",
+    "refs": []
+   }
+  ]
+ },
+ {
+  "id": "m4",
+  "topics": [
+   {
+    "topic": "B+ Tree Indexing – Insertion & Deletion",
+    "refs": [
+     "A1-23-24-Q6",
+     "A1-24-25-Q9(a)",
+     "A2-24-25-Q5(a)",
+     "B1-25-26-Q8",
+     "B2-22-23-Q7(ii)",
+     "E1-25-26-Q5"
+    ]
+   },
+   {
+    "topic": "Static Hashing",
+    "refs": [
+     "E1-25-26-Q6(a)"
+    ]
+   },
+   {
+    "topic": "Dynamic Hashing / Extendible Hashing",
+    "refs": [
+     "A2-24-25-Q5(b)(i)"
+    ]
+   },
+   {
+    "topic": "Quadratic Probing / Double Hashing",
+    "refs": [
+     "A1-24-25-Q9(b)",
+     "E1-25-26-Q6(b)"
+    ]
+   },
+   {
+    "topic": "Relational Algebra",
+    "refs": [
+     "A2-24-25-Q5(b)(ii)",
+     "B2-24-25-Q6",
+     "B2-25-26-Q6"
+    ]
+   },
+   {
+    "topic": "Heuristic Query Optimization",
+    "refs": [
+     "B1-25-26-Q4",
+     "B2-22-23-Q7(i)"
+    ]
+   },
+   {
+    "topic": "Query Trees and Optimization",
+    "refs": [
+     "A1-23-24-Q5",
+     "F2-23-24-Q8"
+    ]
+   },
+   {
+    "topic": "Multilevel Indexing",
+    "refs": [
+     "B2-24-25-Q5",
+     "B2-25-26-Q5"
+    ]
+   },
+   {
+    "topic": "File Organization",
+    "refs": []
+   },
+   {
+    "topic": "Tuple Relational Calculus",
+    "refs": []
+   }
+  ]
+ },
+ {
+  "id": "m5",
+  "topics": [
+   {
+    "topic": "Conflict Serializability",
+    "refs": [
+     "A1-23-24-Q7",
+     "A2-24-25-Q6(i)",
+     "B1-25-26-Q5",
+     "B2-22-23-Q2",
+     "B2-24-25-Q7",
+     "B2-25-26-Q7",
+     "E1-25-26-Q7(a)"
+    ]
+   },
+   {
+    "topic": "Recoverable, Cascadeless & Strict Schedules",
+    "refs": [
+     "A2-24-25-Q7"
+    ]
+   },
+   {
+    "topic": "Deferred & Immediate Database Modification",
+    "refs": [
+     "A1-24-25-Q6",
+     "B1-25-26-Q9(b)(i)",
+     "F2-23-24-Q4(b)"
+    ]
+   },
+   {
+    "topic": "Log-Based Recovery Protocols",
+    "refs": [
+     "B1-25-26-Q9(b)(ii)",
+     "E1-25-26-Q7(b)",
+     "F2-23-24-Q4(a)"
+    ]
+   },
+   {
+    "topic": "Shadow Paging",
+    "refs": [
+     "A1-23-24-Q9(a)",
+     "B2-24-25-Q8(b)",
+     "B2-25-26-Q8(b)"
+    ]
+   },
+   {
+    "topic": "ACID Properties",
+    "refs": [
+     "A2-24-25-Q6(ii)"
+    ]
+   },
+   {
+    "topic": "Transaction States",
+    "refs": [
+     "B2-24-25-Q8(a)",
+     "B2-25-26-Q8(a)"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "m6",
+  "topics": [
+   {
+    "topic": "Two-Phase Locking (2PL)",
+    "refs": [
+     "A1-24-25-Q10(a)",
+     "A2-24-25-Q9",
+     "B1-25-26-Q6",
+     "B2-24-25-Q9(a)",
+     "B2-25-26-Q9(a)",
+     "E1-25-26-Q8(b)"
+    ]
+   },
+   {
+    "topic": "Deadlock Detection – Wait-for Graph",
+    "refs": [
+     "B1-25-26-Q10(b)(ii)",
+     "B2-22-23-Q8",
+     "E1-25-26-Q8(a)"
+    ]
+   },
+   {
+    "topic": "Lock-Based Protocols",
+    "refs": [
+     "A1-24-25-Q7",
+     "B1-25-26-Q9(a)",
+     "F2-23-24-Q9"
+    ]
+   },
+   {
+    "topic": "Timestamp-Based Protocols",
+    "refs": [
+     "A1-23-24-Q8",
+     "A1-24-25-Q10(b)",
+     "E1-25-26-Q9(a)"
+    ]
+   },
+   {
+    "topic": "Deadlock Prevention Techniques",
+    "refs": [
+     "A1-23-24-Q9(b)",
+     "A2-24-25-Q8",
+     "B1-25-26-Q10(b)(i)"
+    ]
+   },
+   {
+    "topic": "Lock Compatibility Matrix",
+    "refs": []
+   },
+   {
+    "topic": "Multi-Granularity Locking",
+    "refs": [
+     "B2-24-25-Q9(b)",
+     "B2-25-26-Q9(b)"
+    ]
+   },
+   {
+    "topic": "Graph-Based Protocols",
+    "refs": []
+   },
+   {
+    "topic": "Thomas Write Rule",
+    "refs": [
+     "E1-25-26-Q9(b)"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "m7",
+  "topics": [
+   {
+    "topic": "CAP Theorem",
+    "refs": [
+     "A1-23-24-Q10(a)",
+     "A1-24-25-Q8",
+     "B1-25-26-Q7",
+     "B2-24-25-Q10(a)",
+     "B2-25-26-Q10(a)",
+     "F2-23-24-Q5"
+    ]
+   },
+   {
+    "topic": "Types of NoSQL Databases",
+    "refs": [
+     "B1-25-26-Q10(a)",
+     "B2-24-25-Q10(b)",
+     "B2-25-26-Q10(b)",
+     "E1-25-26-Q10(a)"
+    ]
+   },
+   {
+    "topic": "Document Database / MongoDB Operations",
+    "refs": [
+     "B2-22-23-Q3"
+    ]
+   },
+   {
+    "topic": "NoSQL Applications and Use Cases",
+    "refs": [
+     "A1-23-24-Q10(b)",
+     "A2-24-25-Q10"
+    ]
+   },
+   {
+    "topic": "Need and Characteristics of NoSQL",
+    "refs": [
+     "E1-25-26-Q10(b)"
+    ]
+   }
+  ]
+ }
+]

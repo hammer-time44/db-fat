@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#000000">
   <meta name="description" content="DBMS: module priorities and FAT question papers.">
-  <title>DBMS: FAT Question Papers</title>
+  <title>DBMS</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script>
     /* Set theme + mode before first paint so there is no flash. */
@@ -19,6 +19,7 @@
   <link rel="modulepreload" href="js/api.js">
   <link rel="preload" href="data/modules.json" as="fetch" crossorigin="anonymous">
   <link rel="preload" href="data/papers.json" as="fetch" crossorigin="anonymous">
+  <link rel="preload" href="data/topics.json" as="fetch" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
@@ -37,10 +38,44 @@
           <button type="button" data-mode="view" aria-pressed="true">View</button>
           <button type="button" data-mode="study" aria-pressed="false">Study</button>
         </div>
-        <a class="fat-btn fat-link" id="fatBtn" href="https://db-fat.vercel.app/" target="_blank" rel="noopener" aria-label="Open FAT question papers">fat</a>
+        <div class="keys-wrap" id="keysWrap" hidden>
+          <button class="fat-btn" id="keysBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="keysMenu" aria-label="Keyboard shortcuts" title="Keyboard shortcuts (?)">keys</button>
+          <div class="keys-menu" id="keysMenu" role="menu" aria-label="Keyboard shortcuts" hidden>
+            <div class="keys-title">Shortcuts</div>
+            <ul>
+              <li><span>Search</span><kbd>/</kbd></li>
+              <li><span>Clear search / leave box</span><kbd>Esc</kbd></li>
+              <li><span>Go back</span><kbd>Esc</kbd><kbd>Backspace</kbd></li>
+              <li><span>Next module / topic</span><kbd>&rarr;</kbd></li>
+              <li><span>Previous module / topic</span><kbd>&larr;</kbd></li>
+              <li><span>Next / previous topic card</span><kbd>J</kbd><kbd>K</kbd></li>
+              <li><span>Show this menu</span><kbd>?</kbd></li>
+              <li><span>Paper viewer: page / close</span><kbd>&larr;</kbd><kbd>&rarr;</kbd><kbd>Esc</kbd></li>
+            </ul>
+            <div class="keys-note">Back and arrow keys work when you are not typing in the search box.</div>
+          </div>
+        </div>
+        <div class="keys-wrap feat-wrap" id="featWrap" hidden>
+          <button class="fat-btn" id="featBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="featMenu" aria-label="Features" title="Features">features</button>
+          <div class="keys-menu feat-menu" id="featMenu" role="menu" aria-label="Features" hidden>
+            <div class="keys-title">Quick guide</div>
+            <ul class="guide">
+              <li><i class="g-tick">&#10003;</i><span>Tick = solved <em>(Study mode)</em></span></li>
+              <li><i class="g-pill">PAPER</i><span>Scanned page at that question</span></li>
+              <li><i class="g-pill">OPEN</i><span>Jump to it in its paper</span></li>
+              <li><i class="g-chip">M1</i><span>Module &mdash; tap to open it</span></li>
+              <li><i class="g-pill">tab&times;2</i><span>Double-click tab = original PDF</span></li>
+              <li><i class="g-pill">topic &rarr;</i><span>Home topic opens its questions</span></li>
+              <li><i class="g-pill">q5</i><span>Search words or question no.</span></li>
+            </ul>
+            <div class="keys-note">Hover keys / features to open.</div>
+          </div>
+        </div>
+        <a class="fat-btn fat-link" id="extBtn" href="https://db-fat.vercel.app/" target="_blank" rel="noopener" aria-label="Open the other site (A)" title="Open the other site">A</a>
+        <button class="fat-btn" id="fatBtn" type="button" aria-label="Open FAT question papers">fat</button>
+        <button class="fat-btn topic-btn" id="topicBtn" type="button" aria-label="Open topic-wise question list">topic-wise</button>
         <button class="fat-btn" id="impBtn" type="button" aria-label="Open important notes">imp</button>
         <button class="imp-btn" id="distrBtn" type="button" aria-label="Open marks distribution">distr</button>
-        <button class="icon-btn" id="cmpBtn" type="button" aria-label="Compare two modules" title="Compare modules (C)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="16" rx="2"/><rect x="14" y="4" width="7" height="16" rx="2"/></svg></button>
         <button class="icon-btn" id="theme" aria-label="Switch to light mode" title="Toggle theme"></button>
         </div>
         <div class="col">
