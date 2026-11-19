@@ -1,6 +1,6 @@
 // Service worker: precache the app shell and data, then answer from cache and refresh in the background.
 // Repeat visits paint instantly and the site works offline. Bump VERSION to force a refresh.
-const VERSION = "v6";
+const VERSION = "v7";
 const CACHE = "dbms-exam-prep-" + VERSION;
 const SHELL = ["./", "index.html", "css/styles.css", "js/app.js", "js/api.js", "data/modules.json", "data/papers.json", "data/topics.json", "favicon.svg", "img/imp1.jpg", "img/imp2.jpg"];
 

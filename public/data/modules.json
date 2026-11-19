@@ -41,7 +41,8 @@
     "priority": "Low"
    }
   ],
-  "marks": 10
+  "marks": 10,
+  "questions": 1
  },
  {
   "id": "m2",
@@ -89,7 +90,8 @@
     "priority": "Low"
    }
   ],
-  "marks": 10
+  "marks": 10,
+  "questions": 1
  },
  {
   "id": "m3",
@@ -148,7 +150,9 @@
     "priority": "Low"
    }
   ],
-  "marks": 20
+  "marks": 20,
+  "questions": 1,
+  "either": true
  },
  {
   "id": "m4",
@@ -215,7 +219,8 @@
     "priority": "Low"
    }
   ],
-  "marks": 20
+  "marks": 20,
+  "questions": 2
  },
  {
   "id": "m5",
@@ -266,7 +271,8 @@
     "link": "Transaction States"
    }
   ],
-  "marks": 20
+  "marks": 20,
+  "questions": 2
  },
  {
   "id": "m6",
@@ -327,7 +333,8 @@
     "link": "Thomas Write Rule"
    }
   ],
-  "marks": 20
+  "marks": 20,
+  "questions": 2
  },
  {
   "id": "m7",
@@ -366,6 +373,8 @@
     "link": "Need and Characteristics of NoSQL"
    }
   ],
-  "marks": 20
+  "marks": 20,
+  "questions": 1,
+  "either": true
  }
 ]

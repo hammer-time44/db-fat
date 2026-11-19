@@ -136,12 +136,15 @@ function filterTopics(rows, term) {
   if (!term) return rows;
   return rows.filter((r) => (r.topic + " " + r.importance + " " + r.priority).toLowerCase().includes(term));
 }
+function qLabel(m, sep) {
+  return m.questions ? (sep || "") + m.questions + "Q" + (m.either ? " (either or)" : "") : "";
+}
 function marksStrip(bare) {
   if (!MODS.some((x) => x.marks)) return "";
   const big = MODS.filter((x) => x.marks >= 20);
   let h = '<div class="marks" aria-label="Marks distribution"><div class="marks-head">Marks distribution</div><div class="marks-grid">';
   MODS.forEach((x, i) => {
-    h += '<a class="mk' + (x.marks >= 20 ? " big" : "") + (!bare && i === cur ? " on" : "") + '" href="#' + x.id + '" data-go="' + x.id + '" title="' + esc(x.title) + '"><b>' + x.id.toUpperCase() + "</b><span>" + x.marks + "</span></a>";
+    h += '<a class="mk' + (x.marks >= 20 ? " big" : "") + (!bare && i === cur ? " on" : "") + '" href="#' + x.id + '" data-go="' + x.id + '" title="' + esc(x.title + (x.questions ? " \u2013 " + qLabel(x) : "")) + '"><b>' + x.id.toUpperCase() + "</b><span>" + x.marks + "</span></a>";
   });
   h += "</div>";
   if (big.length && !bare) h += '<p class="marks-note">Modules ' + big.map((x) => x.id.slice(1)).join(", ") + " carry 20 marks, the rest carry 10.</p>";
@@ -163,7 +166,7 @@ function renderCloud(term) {
   const b = plain ? [] : filterTopics(m.priority2, term);
   let h = marksStrip() + overallCard();
   h += "<h1>" + m.id.toUpperCase() + " – " + esc(m.title) + "</h1>";
-  h += '<div class="stat">' + (m.marks ? '<span class="pill marks-pill' + (m.marks >= 20 ? " big" : "") + '">' + m.marks + " marks</span>" : "") + (plain ? '<span class="pill">' + (m.priority1.length + m.priority2.length) + " topics</span>" : '<span class="pill">' + m.priority1.length + ' must prepare</span><span class="pill">' + m.priority2.length + " important</span>") + '<span class="pill study-only">' + dn + " / " + allT.length + ' done</span></div><div class="bar"><i style="width:' + Math.round((dn / allT.length) * 100) + '%"></i></div>';
+  h += '<div class="stat">' + (m.marks ? '<span class="pill marks-pill' + (m.marks >= 20 ? " big" : "") + '">' + m.marks + " marks</span>" : "") + (m.questions ? '<span class="pill">' + qLabel(m) + "</span>" : "") + (plain ? '<span class="pill">' + (m.priority1.length + m.priority2.length) + " topics</span>" : '<span class="pill">' + m.priority1.length + ' must prepare</span><span class="pill">' + m.priority2.length + " important</span>") + '<span class="pill study-only">' + dn + " / " + allT.length + ' done</span></div><div class="bar"><i style="width:' + Math.round((dn / allT.length) * 100) + '%"></i></div>';
   if (a.length) h += (plain ? "" : '<span class="chip p1">Priority 1 – Must prepare</span>') + (plain ? '<div style="height:var(--s2)"></div>' : "") + topicTable(a, plain, m.id);
   if (b.length) h += '<span class="chip p2">Priority 2 – Important</span>' + topicTable(b, false, m.id);
   if (!a.length && !b.length) h += '<p class="none">No topics in ' + m.id.toUpperCase() + " match “" + esc(q.value.trim()) + "”.</p>";
@@ -422,7 +425,7 @@ function renderTopic(term) {
 /* ---------- distr view: marks distribution ---------- */
 function renderDistr() {
   let list = "";
-  MODS.forEach((x) => { if (x.marks) list += "<p>" + x.id.toUpperCase() + " - " + x.marks + "</p>"; });
+  MODS.forEach((x) => { if (x.marks) list += "<p>" + x.id.toUpperCase() + " - " + x.marks + " marks" + qLabel(x, " \u00b7 ") + "</p>"; });
   bodyEl.innerHTML = "<h1>Distribution</h1>" + marksStrip(true) + '<div class="imp-list">' + list + "</div>";
 }
 
